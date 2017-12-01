@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\uint128.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\real128.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\variant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\variant_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\thread_specific.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\future.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\spin_lock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\spin_yield_lock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\mutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\non_preemptable_scope_check.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\asio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\shared_ptr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\utf8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\iostream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\datastream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\buffered_iostream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\fstream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\sstream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\json.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\varint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\io\console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\filesystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\interprocess\process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\interprocess\signals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\interprocess\file_mapping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\interprocess\mmap_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\interprocess\file_mutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\cli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\http_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\json_connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\bstate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\rpc\websocket_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\log_message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\appender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\console_appender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\file_appender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\gelf_appender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\logger_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\_digest_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\openssl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\aes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\crc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\city.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\base36.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\base58.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\bigint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\hex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\sha1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\ripemd160.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\sha256.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\sha224.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\sha512.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\dh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\blowfish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\elliptic_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\elliptic_impl_priv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\elliptic_secp256k1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\rand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\tcp_socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\udp_socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\http\http_connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\http\http_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\http\websocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\ip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\rate_limiting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\resolve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\network\url.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\compress\smaz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\compress\zlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\git_revision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\actor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\aligned.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\any.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\api.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\asio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\bitutil.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\bloom_filter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\compress\smaz.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\compress\zlib.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\container\deque.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\container\deque_fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\container\flat.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\container\flat_fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\aes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\base36.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\base58.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\base64.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\bigint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\blowfish.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\city.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\dh.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\digest.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\elliptic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\hex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\hmac.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\openssl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\pke.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\rand.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\ripemd160.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\sha1.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\sha224.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\sha256.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\crypto\sha512.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\exception\exception.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\filesystem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\fixed_string.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\fwd_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\git_revision.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\container.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\file_mapping.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\file_mutex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\iprocess.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\mmap_struct.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\process.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\interprocess\signals.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\buffered_iostream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\console.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\datastream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\datastream_back.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\enum_type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\fstream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\iobuffer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\iostream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\json_relaxed.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\raw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\raw_fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\raw_unpack_file.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\raw_variant.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\sstream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\stdio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\io\varint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\appender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\console_appender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\file_appender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\gelf_appender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\log_message.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\logger.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\log\logger_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\make_fused.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\http\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\http\server.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\http\websocket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\ip.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\rate_limiting.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\resolve.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\tcp_socket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\tcp_socket_io_hooks.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\udp_socket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\network\url.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\noncopyable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\optional.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\platform_independence.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\real128.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\reflect\reflect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\reflect\typename.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\reflect\variant.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\api_connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\binary_api_connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\bstate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\cli.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\http_api.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\json_connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\state.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\variant_connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\variant_stream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\rpc\websocket_api.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\safe.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\scoped_exit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\shared_ptr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\signal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\signals.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\smart_ref_fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\smart_ref_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\static_variant.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\string.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\future.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\mutex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\non_preemptable_scope_check.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\priority.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\scoped_lock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\spin_lock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\spin_yield_lock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\task.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\thread.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\thread_specific.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\unique_lock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\thread\wait_condition.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\time.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\tuple.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\uint128.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\unique_ptr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\utf8.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\utility.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\variant.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\variant_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\vector_fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\include\fc\wait_any.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\byteswap.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\_digest_common.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\_elliptic_impl_priv.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\crypto\_elliptic_impl_pub.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\context.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\thread\thread_d.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\all.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\child.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\context.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\basic_status.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\basic_status_service.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\posix_helpers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\status_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\systembuf.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\detail\windows_helpers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\environment.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\handle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\operations.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\pid_type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\pipe.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\pistream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\postream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\process.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\self.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\status.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\stream_behavior.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\stream_ends.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\stream_id.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\boost_1.51\include\boost\process\stream_type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\examples\echo_server\echo_handler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\examples\external_io_service\tcp_echo_server.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\test\connection\connection_tu2.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\base64\base64.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\close.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\asio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\asio_ssl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\chrono.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\connection_hdl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\cpp11.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\functional.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\md5.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\memory.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\network.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\platforms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\random.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\regex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\stdint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\system_error.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\thread.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\time.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\common\type_traits.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\concurrency\basic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\concurrency\none.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\asio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\asio_client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\asio_no_tls.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\asio_no_tls_client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\boost_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\core.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\core_client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\debug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\debug_asio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\debug_asio_no_tls.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\minimal_client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\config\minimal_server.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\connection_base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\endpoint_base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\error.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\extensions\extension.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\extensions\permessage_deflate\disabled.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\extensions\permessage_deflate\enabled.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\frame.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\constants.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\impl\parser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\impl\request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\impl\response.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\parser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\http\response.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\impl\connection_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\impl\endpoint_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\impl\utilities_impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\logger\basic.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\logger\levels.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\logger\stub.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\logger\syslog.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\message_buffer\alloc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\message_buffer\message.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\message_buffer\pool.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\hybi00.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\hybi07.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\hybi08.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\hybi13.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\processors\processor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\random\none.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\random\random_device.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\roles\client_endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\roles\server_endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\server.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\sha1\sha1.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\security\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\security\none.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\asio\security\tls.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\base\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\base\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\debug\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\debug\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\debug\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\iostream\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\iostream\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\iostream\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\stub\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\stub\connection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\transport\stub\endpoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\uri.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\utf8_validator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\websocketpp\websocketpp\version.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\log\console_defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\utf8\checked.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\utf8\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\src\utf8\unchecked.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\diff-match-patch-cpp-stl\diff_match_patch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\include\secp256k1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\bench.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\borromean.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\borromean_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecdh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecdh_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecdsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecdsa_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\eckey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\eckey_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecmult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecmult_gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecmult_gen_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\ecmult_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_10x26.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_10x26_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_5x52.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_5x52_asm_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_5x52_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_5x52_int128_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\field_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\group_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\hash_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\java\org_bitcoin_NativeSecp256k1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\num.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\num_gmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\num_gmp_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\num_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\rangeproof.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\rangeproof_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar_4x64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar_4x64_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar_8x32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar_8x32_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\scalar_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\testrand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\testrand_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\fc\vendor\secp256k1-zkp\src\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\libraries\fc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8482F4AC-46FA-3CD1-8502-1F35C7C1883E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FE2EED4C-853C-3B6D-9911-35D0ABE39231}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

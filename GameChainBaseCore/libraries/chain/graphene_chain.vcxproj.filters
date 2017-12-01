@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\fork_database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\types.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\address.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\authority.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\asset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\assert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\account.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\transfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\committee_member.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\witness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\market.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\proposal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\withdraw_permission.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\asset_ops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\memo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\worker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\custom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\operations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\transaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\fee_schedule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\confidential.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\protocol\vote.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\genesis_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\get_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\pts_address.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\balance_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\account_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\assert_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\witness_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\committee_member_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\asset_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\transfer_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\proposal_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\market_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\vesting_balance_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\withdraw_permission_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\worker_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\confidential_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\special_authority.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\buyback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\account_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\asset_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\fba_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\proposal_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\vesting_balance_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\block_database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\chain\is_authorized_asset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\account_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\account_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\assert_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\asset_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\asset_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\balance_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\balance_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\block_database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\block_summary_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\budget_record_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\buyback.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\buyback_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\chain_property_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\committee_member_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\committee_member_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\confidential_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\confidential_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\custom_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\db_with.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\fba_accumulator_id.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\fba_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\fork_database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\genesis_state.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\get_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\global_property_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\immutable_chain_parameters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\internal_exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\is_authorized_asset.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\market_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\market_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\node_property_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\operation_history_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\proposal_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\proposal_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\pts_address.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\special_authority.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\special_authority_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\transaction_evaluation_state.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\transaction_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\transfer_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\vesting_balance_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\vesting_balance_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\vote_count.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\withdraw_permission_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\withdraw_permission_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\witness_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\witness_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\witness_schedule_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\worker_evaluator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\worker_object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\account.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\address.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\assert.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\asset.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\asset_ops.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\authority.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\balance.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\block.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\buyback.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\chain_parameters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\committee_member.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\confidential.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\custom.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\ext.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\fba.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\fee_schedule.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\market.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\memo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\operations.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\proposal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\protocol.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\special_authority.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\transaction.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\transfer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\vesting.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\vote.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\withdraw_permission.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\witness.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\protocol\worker.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\hardfork.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\libraries\chain\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8482F4AC-46FA-3CD1-8502-1F35C7C1883E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FE2EED4C-853C-3B6D-9911-35D0ABE39231}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

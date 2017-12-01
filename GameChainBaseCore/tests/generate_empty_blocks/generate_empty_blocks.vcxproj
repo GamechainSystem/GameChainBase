@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B1BDFBA4-1487-31C3-B87E-46F211EBCC20}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>generate_empty_blocks</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">generate_empty_blocks.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">generate_empty_blocks</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">generate_empty_blocks.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">generate_empty_blocks</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">generate_empty_blocks.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">generate_empty_blocks</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\libraries\app\Release\graphene_app.lib;..\..\libraries\chain\Release\graphene_chain.lib;..\..\libraries\egenesis\Release\graphene_egenesis_none.lib;..\..\libraries\fc\Release\fc.lib;..\..\libraries\plugins\market_history\Release\graphene_market_history.lib;..\..\libraries\plugins\account_history\Release\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\Release\graphene_debug_witness.lib;..\..\libraries\app\Release\graphene_app.lib;..\..\libraries\plugins\market_history\Release\graphene_market_history.lib;..\..\libraries\plugins\account_history\Release\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\Release\graphene_debug_witness.lib;..\..\libraries\net\Release\graphene_net.lib;..\..\libraries\utilities\Release\graphene_utilities.lib;..\..\libraries\chain\Release\graphene_chain.lib;..\..\libraries\db\Release\graphene_db.lib;..\..\libraries\fc\Release\fc.lib;E:\GameChain\boost_lib\lib\libboost_thread.lib;E:\GameChain\boost_lib\lib\libboost_date_time.lib;E:\GameChain\boost_lib\lib\libboost_system.lib;E:\GameChain\boost_lib\lib\libboost_filesystem.lib;E:\GameChain\boost_lib\lib\libboost_program_options.lib;E:\GameChain\boost_lib\lib\libboost_signals.lib;E:\GameChain\boost_lib\lib\libboost_serialization.lib;E:\GameChain\boost_lib\lib\libboost_chrono.lib;E:\GameChain\boost_lib\lib\libboost_unit_test_framework.lib;E:\GameChain\boost_lib\lib\libboost_context.lib;E:\GameChain\boost_lib\lib\libboost_locale.lib;E:\GameChain\boost_lib\lib\libboost_iostreams.lib;E:\GameChain\boost_lib\lib\libboost_coroutine.lib;E:\GameChain\OpenSSL\lib\ssleay32.lib;E:\GameChain\OpenSSL\lib\libeay32.lib;wsock32.lib;ws2_32.lib;userenv.lib;rpcrt4.lib;..\..\libraries\fc\Release\secp256k1.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/Release/generate_empty_blocks.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/Release/generate_empty_blocks.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\libraries\app\RelWithDebInfo\graphene_app.lib;..\..\libraries\chain\RelWithDebInfo\graphene_chain.lib;..\..\libraries\egenesis\RelWithDebInfo\graphene_egenesis_none.lib;..\..\libraries\fc\RelWithDebInfo\fc.lib;..\..\libraries\plugins\market_history\RelWithDebInfo\graphene_market_history.lib;..\..\libraries\plugins\account_history\RelWithDebInfo\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\RelWithDebInfo\graphene_debug_witness.lib;..\..\libraries\app\RelWithDebInfo\graphene_app.lib;..\..\libraries\plugins\market_history\RelWithDebInfo\graphene_market_history.lib;..\..\libraries\plugins\account_history\RelWithDebInfo\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\RelWithDebInfo\graphene_debug_witness.lib;..\..\libraries\net\RelWithDebInfo\graphene_net.lib;..\..\libraries\utilities\RelWithDebInfo\graphene_utilities.lib;..\..\libraries\chain\RelWithDebInfo\graphene_chain.lib;..\..\libraries\db\RelWithDebInfo\graphene_db.lib;..\..\libraries\fc\RelWithDebInfo\fc.lib;E:\GameChain\boost_lib\lib\libboost_thread.lib;E:\GameChain\boost_lib\lib\libboost_date_time.lib;E:\GameChain\boost_lib\lib\libboost_system.lib;E:\GameChain\boost_lib\lib\libboost_filesystem.lib;E:\GameChain\boost_lib\lib\libboost_program_options.lib;E:\GameChain\boost_lib\lib\libboost_signals.lib;E:\GameChain\boost_lib\lib\libboost_serialization.lib;E:\GameChain\boost_lib\lib\libboost_chrono.lib;E:\GameChain\boost_lib\lib\libboost_unit_test_framework.lib;E:\GameChain\boost_lib\lib\libboost_context.lib;E:\GameChain\boost_lib\lib\libboost_locale.lib;E:\GameChain\boost_lib\lib\libboost_iostreams.lib;E:\GameChain\boost_lib\lib\libboost_coroutine.lib;E:\GameChain\OpenSSL\lib\ssleay32.lib;E:\GameChain\OpenSSL\lib\libeay32.lib;wsock32.lib;ws2_32.lib;userenv.lib;rpcrt4.lib;..\..\libraries\fc\RelWithDebInfo\secp256k1.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/RelWithDebInfo/generate_empty_blocks.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/RelWithDebInfo/generate_empty_blocks.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\app\include;E:\GameChain\gameChain-core\libraries\app\..\egenesis\include;E:\GameChain\gameChain-core\libraries\plugins\market_history\include;E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;E:\GameChain\gameChain-core\libraries\plugins\account_history\include;E:\GameChain\gameChain-core\libraries\net\include;E:\GameChain\gameChain-core\libraries\utilities\include;E:\GameChain\gameChain-core\libraries\plugins\debug_witness\include;E:\GameChain\gameChain-core\libraries\egenesis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\libraries\app\Debug\graphene_app.lib;..\..\libraries\chain\Debug\graphene_chain.lib;..\..\libraries\egenesis\Debug\graphene_egenesis_none.lib;..\..\libraries\fc\Debug\fc_debug.lib;..\..\libraries\plugins\market_history\Debug\graphene_market_history.lib;..\..\libraries\plugins\account_history\Debug\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\Debug\graphene_debug_witness.lib;..\..\libraries\app\Debug\graphene_app.lib;..\..\libraries\plugins\market_history\Debug\graphene_market_history.lib;..\..\libraries\plugins\account_history\Debug\graphene_account_history.lib;..\..\libraries\plugins\debug_witness\Debug\graphene_debug_witness.lib;..\..\libraries\net\Debug\graphene_net.lib;..\..\libraries\utilities\Debug\graphene_utilities.lib;..\..\libraries\chain\Debug\graphene_chain.lib;..\..\libraries\db\Debug\graphene_db.lib;..\..\libraries\fc\Debug\fc_debug.lib;E:\GameChain\boost_lib\lib\libboost_thread-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_date_time-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_system-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_filesystem-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_program_options-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_signals-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_serialization-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_chrono-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_unit_test_framework-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_context-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_locale-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_iostreams-vc120-mt-gd-1_57.lib;E:\GameChain\boost_lib\lib\libboost_coroutine-vc120-mt-gd-1_57.lib;E:\GameChain\OpenSSL\lib\ssleay32.lib;E:\GameChain\OpenSSL\lib\libeay32.lib;wsock32.lib;ws2_32.lib;userenv.lib;rpcrt4.lib;..\..\libraries\fc\Debug\secp256k1_debug.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/Debug/generate_empty_blocks.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/Debug/generate_empty_blocks.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/tests/generate_empty_blocks/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/GameChain/gameChain-core/tests/generate_empty_blocks/CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;E:\GameChain\gameChain-core\tests\generate_empty_blocks\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\gameChain-core\tests\generate_empty_blocks\main.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\ZERO_CHECK.vcxproj">
+      <Project>{AC89D13F-C19B-361E-A6B5-DC7DA0EBD9D2}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\fc.vcxproj">
+      <Project>{7900F715-DA79-3243-ADAC-CEF99B150DE0}</Project>
+      <Name>fc</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\app\graphene_app.vcxproj">
+      <Project>{05E985D7-7A1B-35E6-AEBD-49AA0EFF67EE}</Project>
+      <Name>graphene_app</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\chain\graphene_chain.vcxproj">
+      <Project>{50926796-B67E-38D5-9FD8-F56BDAEF90B4}</Project>
+      <Name>graphene_chain</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\db\graphene_db.vcxproj">
+      <Project>{54D15914-93A9-3671-B1B1-7A26C19FFB9E}</Project>
+      <Name>graphene_db</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\egenesis\graphene_egenesis_none.vcxproj">
+      <Project>{EFEEAA24-C542-32B6-B1C7-117CF38C9CBD}</Project>
+      <Name>graphene_egenesis_none</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\net\graphene_net.vcxproj">
+      <Project>{5C3ECA5E-7990-33C8-B398-46730C3B0A0C}</Project>
+      <Name>graphene_net</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\utilities\graphene_utilities.vcxproj">
+      <Project>{8BB0B2F0-589F-3724-A219-AC7600A037A0}</Project>
+      <Name>graphene_utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\secp256k1.vcxproj">
+      <Project>{B469479B-B4B1-3F6E-8DC7-B5777DC89BC0}</Project>
+      <Name>secp256k1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

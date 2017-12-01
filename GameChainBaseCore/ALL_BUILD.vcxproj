@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B57CF955-5682-3E80-BDB4-F3D60812901E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\gameChain-core\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/GameChain/gameChain-core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/GameChain/gameChain-core/CMakeLists.txt;E:\GameChain\gameChain-core\CMakeLists.txt;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCCompiler.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\refs\heads\master;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTCL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindFrameworks.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTclsh.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindWish.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/GameChain/gameChain-core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/GameChain/gameChain-core/CMakeLists.txt;E:\GameChain\gameChain-core\CMakeLists.txt;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCCompiler.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\refs\heads\master;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTCL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindFrameworks.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTclsh.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindWish.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/GameChain/gameChain-core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/GameChain/gameChain-core/CMakeLists.txt;E:\GameChain\gameChain-core\CMakeLists.txt;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCCompiler.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;E:\GameChain\GameChainBaseCore\CMakeFiles\3.9.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\refs\heads\master;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTCL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeFindFrameworks.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindTclsh.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindWish.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\ZERO_CHECK.vcxproj">
+      <Project>{AC89D13F-C19B-361E-A6B5-DC7DA0EBD9D2}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\all_tests.vcxproj">
+      <Project>{7A31DF09-3B4B-3D55-9D8F-16DE6D610DE5}</Project>
+      <Name>all_tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\api.vcxproj">
+      <Project>{B7E847C7-87FF-3EAF-ADCF-249D5DB53291}</Project>
+      <Name>api</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\app_test.vcxproj">
+      <Project>{EE6A55F0-DCC4-3FEF-888F-A94489A78E02}</Project>
+      <Name>app_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\bip_lock.vcxproj">
+      <Project>{8A39D2F6-C18A-38E4-AB90-2771D03A2474}</Project>
+      <Name>bip_lock</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\blind.vcxproj">
+      <Project>{B91723EF-4C60-394A-ACB9-C21904DEBC13}</Project>
+      <Name>blind</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\blinding_test.vcxproj">
+      <Project>{4B8BD51B-B387-3BB7-BB8A-269F09C95EE8}</Project>
+      <Name>blinding_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\bloom_test.vcxproj">
+      <Project>{69221627-BFAF-3B53-B016-9CB730519E62}</Project>
+      <Name>bloom_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\build_helpers\cat-parts.vcxproj">
+      <Project>{A599B077-6968-388A-B65B-16F8C2DA2CD2}</Project>
+      <Name>cat-parts</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\chain_bench.vcxproj">
+      <Project>{E5DDDC65-87BF-365A-BF86-B8A76C7627F3}</Project>
+      <Name>chain_bench</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\chain_test.vcxproj">
+      <Project>{37C88A6A-A122-3DF4-A816-0D348058D07C}</Project>
+      <Name>chain_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\cli_wallet\cli_wallet.vcxproj">
+      <Project>{CE59298A-BCA2-3369-9023-E3C676AA83BF}</Project>
+      <Name>cli_wallet</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\genesis_util\convert_address.vcxproj">
+      <Project>{D0BE5A8F-0B01-3E8C-9669-572EF7BD20C0}</Project>
+      <Name>convert_address</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\debug_node\debug_node.vcxproj">
+      <Project>{4789EA8C-FF30-3837-BFEA-9AD19BEC9183}</Project>
+      <Name>debug_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\delayed_node\delayed_node.vcxproj">
+      <Project>{A24DD8DB-FED0-361E-A0B0-4ACD7A8BBEA7}</Project>
+      <Name>delayed_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\deterministic_openssl_rand\deterministic_openssl_rand.vcxproj">
+      <Project>{C6A60947-0869-3096-93F5-B1C246E80809}</Project>
+      <Name>deterministic_openssl_rand</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\ecc_test.vcxproj">
+      <Project>{EE320A4C-2DB7-357B-8699-4BAAD5054CD0}</Project>
+      <Name>ecc_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\egenesis\embed_genesis.vcxproj">
+      <Project>{842E4A43-13B2-305F-A79D-34344DCD4F46}</Project>
+      <Name>embed_genesis</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\fc.vcxproj">
+      <Project>{7900F715-DA79-3243-ADAC-CEF99B150DE0}</Project>
+      <Name>fc</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\generate_empty_blocks\generate_empty_blocks.vcxproj">
+      <Project>{B1BDFBA4-1487-31C3-B87E-46F211EBCC20}</Project>
+      <Name>generate_empty_blocks</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\genesis_util\genesis_update.vcxproj">
+      <Project>{8663AD9C-3F9E-35FE-96DC-BD0BAF58F673}</Project>
+      <Name>genesis_update</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\genesis_util\get_dev_key.vcxproj">
+      <Project>{A2BEFD38-C320-3BDB-B6E0-61B5EB576B93}</Project>
+      <Name>get_dev_key</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\app\graphene_app.vcxproj">
+      <Project>{05E985D7-7A1B-35E6-AEBD-49AA0EFF67EE}</Project>
+      <Name>graphene_app</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\chain\graphene_chain.vcxproj">
+      <Project>{50926796-B67E-38D5-9FD8-F56BDAEF90B4}</Project>
+      <Name>graphene_chain</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\db\graphene_db.vcxproj">
+      <Project>{54D15914-93A9-3671-B1B1-7A26C19FFB9E}</Project>
+      <Name>graphene_db</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\plugins\delayed_node\graphene_delayed_node.vcxproj">
+      <Project>{20368100-3B9E-3E3D-BA0F-77714ECACE5F}</Project>
+      <Name>graphene_delayed_node</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\egenesis\graphene_egenesis_brief.vcxproj">
+      <Project>{C4A4FFB7-AB91-37C8-A89F-0BECB515E502}</Project>
+      <Name>graphene_egenesis_brief</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\egenesis\graphene_egenesis_full.vcxproj">
+      <Project>{F2708B8B-E375-397C-82B0-FCAEEAD3AEB9}</Project>
+      <Name>graphene_egenesis_full</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\egenesis\graphene_egenesis_none.vcxproj">
+      <Project>{EFEEAA24-C542-32B6-B1C7-117CF38C9CBD}</Project>
+      <Name>graphene_egenesis_none</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\net\graphene_net.vcxproj">
+      <Project>{5C3ECA5E-7990-33C8-B398-46730C3B0A0C}</Project>
+      <Name>graphene_net</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\utilities\graphene_utilities.vcxproj">
+      <Project>{8BB0B2F0-589F-3724-A219-AC7600A037A0}</Project>
+      <Name>graphene_utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\wallet\graphene_wallet.vcxproj">
+      <Project>{8DFA2DFE-653C-3893-8991-AC88AAFAA33C}</Project>
+      <Name>graphene_wallet</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\plugins\witness\graphene_witness.vcxproj">
+      <Project>{F8235B3F-FE60-311A-9DCF-85769DC1F409}</Project>
+      <Name>graphene_witness</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\hmac_test.vcxproj">
+      <Project>{2483BC63-F21B-3A25-B6A1-27A435D67486}</Project>
+      <Name>hmac_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\intense_test.vcxproj">
+      <Project>{5977B4A2-F3F3-3BE5-ACB1-A298249C1890}</Project>
+      <Name>intense_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\js_operation_serializer\js_operation_serializer.vcxproj">
+      <Project>{DB594F55-E2A4-3C43-A47E-BF590233212C}</Project>
+      <Name>js_operation_serializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\log_test.vcxproj">
+      <Project>{FC402854-F040-3B7F-B3F1-072D762D6C61}</Project>
+      <Name>log_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\build_helpers\member_enumerator.vcxproj">
+      <Project>{BAC57D75-5323-3EC3-9D7E-6ADBF46A3279}</Project>
+      <Name>member_enumerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\tests\performance_test.vcxproj">
+      <Project>{F83FAE8D-A904-3AC8-BB45-83BE6A667948}</Project>
+      <Name>performance_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\real128_test.vcxproj">
+      <Project>{4F1BA5C9-01A5-39C4-B478-7345720D1145}</Project>
+      <Name>real128_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\secp256k1.vcxproj">
+      <Project>{B469479B-B4B1-3F6E-8DC7-B5777DC89BC0}</Project>
+      <Name>secp256k1</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\size_checker\size_checker.vcxproj">
+      <Project>{4D0D116B-8016-382D-8C8F-E9F0A03526AA}</Project>
+      <Name>size_checker</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\task_cancel_test.vcxproj">
+      <Project>{153A4511-D2A1-39C7-A5A4-B5FA8C8255F5}</Project>
+      <Name>task_cancel_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\programs\witness_node\witness_node.vcxproj">
+      <Project>{F987E810-D736-3EE3-8E6B-8B3AEEC9FF0D}</Project>
+      <Name>witness_node</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

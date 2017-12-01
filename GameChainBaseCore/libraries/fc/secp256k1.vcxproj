@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B469479B-B4B1-3F6E-8DC7-B5777DC89BC0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>secp256k1</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">secp256k1.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">secp256k1</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">secp256k1.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">secp256k1</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">secp256k1.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">secp256k1_debug</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;NDEBUG;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;NDEBUG;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;NDEBUG;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;NDEBUG;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;LOG_LONG_API;LOG_LONG_API_MAX_MS=1000;LOG_LONG_API_WARN_MS=750;USE_FIELD_10X26;USE_FIELD_INV_BUILTIN;USE_NUM_NONE;USE_SCALAR_8X32;USE_SCALAR_INV_BUILTIN;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/fc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\GetPrerequisites.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\VersionMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\SetupTargetMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;C:\Program Files\CMake\share\cmake-3.9\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\src\git_revision.cpp.in;C:\Program Files\CMake\share\cmake-3.9\Modules\FindCurses.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindReadline.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBZip2.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ParseLibraryList.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/fc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\GetPrerequisites.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\VersionMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\SetupTargetMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;C:\Program Files\CMake\share\cmake-3.9\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\src\git_revision.cpp.in;C:\Program Files\CMake\share\cmake-3.9\Modules\FindCurses.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindReadline.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBZip2.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ParseLibraryList.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/fc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/GameChain/gameChain-core/libraries/fc/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\GetPrerequisites.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\VersionMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\SetupTargetMacros.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ArgumentParser.cmake;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;C:\Program Files\CMake\share\cmake-3.9\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\GitVersionGen\GetGitRevisionDescription.cmake.in;E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\git-data\grabRef.cmake;E:\GameChain\gameChain-core\.git\modules\libraries\fc\HEAD;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\src\git_revision.cpp.in;C:\Program Files\CMake\share\cmake-3.9\Modules\FindCurses.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\FindReadline.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindBZip2.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeModules\ParseLibraryList.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;E:\GameChain\gameChain-core\libraries\fc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\libraries\fc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\src\secp256k1.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\ZERO_CHECK.vcxproj">
+      <Project>{AC89D13F-C19B-361E-A6B5-DC7DA0EBD9D2}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

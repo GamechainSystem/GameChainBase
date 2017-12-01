@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\db\undo_database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\db\index.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\db\object_database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\flat_index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\fwd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\generic_index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\object_database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\object_id.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\simple_index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\db\include\graphene\db\undo_database.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\libraries\db\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8482F4AC-46FA-3CD1-8502-1F35C7C1883E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FE2EED4C-853C-3B6D-9911-35D0ABE39231}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\all_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\compress\compress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\aes_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\base_n_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\bigint_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\blind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\blowfish_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\dh_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\rand_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\crypto\sha_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\network\http\websocket_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\thread\task_cancel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\bloom_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\real128_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\utf8_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\libraries\fc\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8482F4AC-46FA-3CD1-8502-1F35C7C1883E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

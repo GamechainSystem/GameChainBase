@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\wallet\wallet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\GameChainBaseCore\libraries\wallet\api_documentation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\wallet\include\graphene\wallet\api_documentation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\wallet\include\graphene\wallet\reflect_util.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\wallet\include\graphene\wallet\wallet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\libraries\wallet\CMakeLists.txt" />
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\CMakeFiles\80ada14ebed08ec221f663fca5ada2a7\DoxyDocs.pm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\GameChain\GameChainBaseCore\CMakeFiles\36f8ef5b48a09d5a2a508f97a221f746\api_documentation.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8482F4AC-46FA-3CD1-8502-1F35C7C1883E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FE2EED4C-853C-3B6D-9911-35D0ABE39231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{28400960-9D02-3C33-8514-813DABDC64F4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

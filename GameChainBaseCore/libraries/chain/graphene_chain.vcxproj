@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{50926796-B67E-38D5-9FD8-F56BDAEF90B4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>graphene_chain</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">graphene_chain.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">graphene_chain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">graphene_chain.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">graphene_chain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">graphene_chain.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">graphene_chain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_LINKING_PYTHON;BOOST_DEBUG_PYTHON</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;_WEBSOCKETPP_CPP11_CHRONO_;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GameChain\gameChain-core\libraries\chain\include;E:\GameChain\GameChainBaseCore\libraries\chain\include;E:\GameChain\gameChain-core\libraries\fc\include;E:\GameChain\boost_lib\include\boost-1_57;E:\GameChain\OpenSSL\include;E:\GameChain\gameChain-core\libraries\fc\vendor\diff-match-patch-cpp-stl;E:\GameChain\gameChain-core\libraries\fc\vendor\websocketpp;E:\GameChain\gameChain-core\libraries\fc;E:\GameChain\gameChain-core\libraries\fc\vendor\secp256k1-zkp\include;E:\GameChain\gameChain-core\libraries\db\include;E:\GameChain\gameChain-core\libraries\wallet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/chain/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/chain/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/GameChain/gameChain-core -BE:/GameChain/GameChainBaseCore --check-stamp-file E:/GameChain/GameChainBaseCore/libraries/chain/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/GameChain/gameChain-core/libraries/chain/CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;E:\GameChain\gameChain-core\libraries\chain\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\GameChain\GameChainBaseCore\libraries\chain\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\database.cpp" >
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\fork_database.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\types.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\address.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\authority.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\asset.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\assert.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\account.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\transfer.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\committee_member.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\witness.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\market.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\proposal.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\withdraw_permission.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\asset_ops.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\memo.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\worker.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\custom.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\operations.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\transaction.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\block.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\fee_schedule.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\confidential.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\protocol\vote.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\genesis_state.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\get_config.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\pts_address.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\balance_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\account_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\assert_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\witness_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\committee_member_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\asset_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\transfer_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\proposal_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\market_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\vesting_balance_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\withdraw_permission_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\worker_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\confidential_evaluator.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\special_authority.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\buyback.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\account_object.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\asset_object.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\fba_object.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\proposal_object.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\vesting_balance_object.cpp"  />
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\block_database.cpp" >
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalOptions) /bigobj</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="E:\GameChain\gameChain-core\libraries\chain\is_authorized_asset.cpp"  />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\account_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\account_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\assert_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\asset_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\asset_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\balance_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\balance_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\block_database.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\block_summary_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\budget_record_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\buyback.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\buyback_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\chain_property_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\committee_member_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\committee_member_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\confidential_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\confidential_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\config.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\custom_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\database.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\db_with.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\exceptions.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\fba_accumulator_id.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\fba_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\fork_database.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\genesis_state.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\get_config.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\global_property_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\immutable_chain_parameters.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\internal_exceptions.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\is_authorized_asset.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\market_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\market_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\node_property_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\operation_history_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\proposal_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\proposal_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\pts_address.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\special_authority.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\special_authority_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\transaction_evaluation_state.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\transaction_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\transfer_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\vesting_balance_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\vesting_balance_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\vote_count.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\withdraw_permission_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\withdraw_permission_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\witness_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\witness_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\witness_schedule_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\worker_evaluator.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\worker_object.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\account.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\address.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\assert.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\asset.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\asset_ops.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\authority.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\balance.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\base.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\block.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\buyback.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\chain_parameters.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\committee_member.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\confidential.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\config.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\custom.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\ext.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\fba.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\fee_schedule.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\market.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\memo.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\operations.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\proposal.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\protocol.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\special_authority.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\transaction.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\transfer.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\types.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\vesting.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\vote.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\withdraw_permission.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\witness.hpp" />
+    <ClInclude Include="E:\GameChain\gameChain-core\libraries\chain\include\graphene\chain\protocol\worker.hpp" />
+    <ClInclude Include="E:\GameChain\GameChainBaseCore\libraries\chain\include\graphene\chain\hardfork.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\ZERO_CHECK.vcxproj">
+      <Project>{AC89D13F-C19B-361E-A6B5-DC7DA0EBD9D2}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\chain\build_hardfork_hpp.vcxproj">
+      <Project>{928A9A45-19F9-33BC-A7D4-1DC8E0A4ADDC}</Project>
+      <Name>build_hardfork_hpp</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\fc.vcxproj">
+      <Project>{7900F715-DA79-3243-ADAC-CEF99B150DE0}</Project>
+      <Name>fc</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\db\graphene_db.vcxproj">
+      <Project>{54D15914-93A9-3671-B1B1-7A26C19FFB9E}</Project>
+      <Name>graphene_db</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\GameChain\GameChainBaseCore\libraries\fc\secp256k1.vcxproj">
+      <Project>{B469479B-B4B1-3F6E-8DC7-B5777DC89BC0}</Project>
+      <Name>secp256k1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
