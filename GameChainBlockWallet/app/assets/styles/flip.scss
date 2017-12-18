@@ -1,0 +1,38 @@
+@keyframes modal-flip-enter {
+  from {
+    // transform: perspective(4rem) rotate3d(1, 0, 0, 80deg);
+    transform: scale(0.7);
+    opacity: 0.36
+  }
+  70% {
+    // transform: perspective(4rem) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    // transform: perspective(4rem);
+    transform: scale(1);
+    opacity: 1    
+  }
+}
+.modal-flip-enter {
+  animation: modal-flip-enter both ease-in;
+  backface-visibility: visible !important;
+}
+@keyframes modal-flip-leave {
+  from {
+    // transform: perspective(4rem);
+    transform: scale(1);
+    opacity: 1        
+  }
+  30% {
+   // transform: perspective(4rem) rotate3d(1, 0, 0, -15deg);
+  }
+  to {
+    transform: scale(0.7);   
+    opacity: 0.36;    
+   // transform: perspective(4rem) rotate3d(1, 0, 0, 80deg);
+  }
+}
+.modal-flip-leave {
+  animation: modal-flip-leave both;
+  backface-visibility: visible !important;
+}

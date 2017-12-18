@@ -1,0 +1,20 @@
+/**
+ * Created by necklace on 2016/12/21.
+ */
+
+import React from 'react';
+
+class Settings extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="content vertical-flex vertical-box content_setting">
+                {this.props.children}
+            </div>
+        );
+    }
+}
+
+export default Settings;

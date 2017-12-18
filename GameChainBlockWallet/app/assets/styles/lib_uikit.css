@@ -1,0 +1,49 @@
+.uk-button {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 0.3rem;
+    vertical-align: middle;
+    font-size: 0.14rem;
+    line-height: 0.38rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    -webkit-transition-property: color,background-color,border-color;
+    transition-property: color,background-color,border-color;
+}
+
+.uk-button:not(:disabled) {
+    cursor: pointer;
+}
+
+.uk-button-primary:active, .uk-button-primary.uk-active {
+    background-color: #0e6dcd;
+    color: #fff;
+}
+
+.uk-button-large {
+    padding: 0 .40rem;
+    line-height: 0.53rem;
+    font-size: 0.14rem;
+}
+
+.uk-button-primary {
+    background-color: #1e87f0;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.uk-button-default {
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #e5e5e5;
+}
