@@ -1,1 +1,0 @@
-cordova build android --release

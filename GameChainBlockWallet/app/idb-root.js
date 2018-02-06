@@ -2,7 +2,7 @@ import idb_helper from "./idb-helper"
 import {Apis} from "bitsharesjs-ws";
 
 const DB_VERSION_MAIN = 1
-const DB_PREFIX = "btsgo_db"
+const DB_PREFIX = "gcs_db"
 
 /** Usage: openIndexDB.then( db => ... */
 export default class iDBRoot {

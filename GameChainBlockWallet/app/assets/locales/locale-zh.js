@@ -124,7 +124,7 @@ export const zh_CN = {
     transaction_blinding_factor: "隐私因子",
     transaction_outputs: "输出",
     transaction_inputs: "输入",
-    transaction_broadcast_fail: "交易广播失败:",
+    transaction_broadcast_fail: "交易广播失败,请稍后再试",
     transaction_broadcast_success: "交易已向网络广播",
     transaction_waiting: "等待确认中..",
     transaction_broadcasting: "交易广播中..",

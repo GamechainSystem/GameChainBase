@@ -40,4 +40,6 @@ var normalize = (notification, level) => {
     if(level)
         notification.level = level;
     return notification;
+
+    
 };

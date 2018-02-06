@@ -267,6 +267,7 @@ function BindToChainState(Component, options = {}) {
                         //console.log("-- Wrapper.chain_accounts_list item -->", obj_id, index);
                         if(obj_id) {
                             let new_obj = ChainStore.getAccount(obj_id);
+                            // console.info('new_obj222222222222222',obj_id,JSON.parse(JSON.stringify(new_obj)));
                             if(new_obj) ++resolved_objects_counter;
                             if(prop_prev_state[index] !== new_obj) {
                                 changes = true;
@@ -278,7 +279,8 @@ function BindToChainState(Component, options = {}) {
                         ++index;
                         ++all_objects_counter;
                     });
-                    //console.log("-- Wrapper.chain_accounts_list: ", prop_new_state);
+                    // console.log("-- Wrapper.chain_accounts_list: ",JSON.parse(JSON.stringify(prop_new_state)));
+
                     if(changes) new_state[key] = prop_new_state;
                 } else {
                     if(this.state[key]) new_state[key] = null;
@@ -335,13 +337,16 @@ function BindToChainState(Component, options = {}) {
             const props = omit(this.props, this.all_chain_props);
 
             //console.log("----- Wrapper render ----->", this.componentName(), this.props, this.state);
+            //  console.info('this.required_props',this.required_props);
             for (let prop of this.required_props)  {
                 if(!this.state[prop]) {
+                    // console.info('options',options);
                     if (typeof options !== "undefined" && options.show_loader) {
                         return <Loading />;
                     } else {
                         // returning a temp component of the desired type prevents invariant violation errors, notably when rendering tr components
                         // to use, specicy a defaultProps field of tempComponent: "tr" (or "div", "td", etc as desired)
+                        // console.info('this.tempComponent1111',this.tempComponent);
                         return this.tempComponent ? React.createElement(this.tempComponent) : <span></span>;
                     }
                 }

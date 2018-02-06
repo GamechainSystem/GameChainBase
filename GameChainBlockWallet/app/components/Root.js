@@ -34,7 +34,14 @@ const MenuItemGroup = Menu.ItemGroup;
 import { browserHistory } from 'react-router';
 
 import { notification } from 'antd';
+import { setTimeout } from 'timers';
 
+function removeElement(_element){
+    var _parentElement = _element.parentNode;
+    if(_parentElement){
+           _parentElement.removeChild(_element);
+    }
+}
 
 class Root extends React.Component {
     static contextTypes = {
@@ -83,7 +90,7 @@ class Root extends React.Component {
     }
 
     componentDidMount() {     
-        document.querySelector(".div_loading_c")&&document.querySelector(".div_loading_c").remove();       
+        document.querySelector(".div_loading_c")&&removeElement(document.querySelector(".div_loading_c"));       
         try {
             NotificationStore.listen(this.onNotificationChange.bind(this));
             SettingsStore.listen(this.onSettingsChange.bind(this));
@@ -121,6 +128,12 @@ class Root extends React.Component {
             console.error("error:", e);
         }
         
+        let pathname=this.context.router.location.pathname;
+        if(pathname=="/"||pathname=="/last-operate"){
+            setTimeout(function(){
+                document.querySelector(".ant-menu li.lastOperate")&&document.querySelector(".ant-menu li.lastOperate").click();
+            },300)
+        }
     }
 
     onSettingsChange() {
@@ -143,8 +156,10 @@ class Root extends React.Component {
         this.setState({activeMenuIndex:"2"});
     }
     leftMenuClick({ item, key, keyPath }){
-        if(key=="1"&&window.location.hash.substr(1)!="/last-operate"){
-            //AccountActions.setGlobalLoading.defer(true);     
+        let current_path=window.location.hash.substr(1);
+
+        if(key=="1"&&current_path!="/last-operate"&&current_path!="/"){
+            //AccountActions.setGlobalLoading.defer(true);  
             this.setState({
                 globalLoading:true
             });      
@@ -173,6 +188,7 @@ class Root extends React.Component {
         this.setState({activeMenuIndex:'-1'});
     }
     render() {
+     
         let {disableChat, syncFail, loading,globalLoading} = this.state;
         let content = null;
         let accountName=AccountStore.getState().currentAccount
@@ -189,9 +205,8 @@ class Root extends React.Component {
             content = <Loading/>;
         } else {
             content = (
-                <div className="full vertical-box">
-                    <NavigationBar   onTopRightMenuClick={this.onTopRightMenuClick.bind(this)}
- />
+                <div className="full vertical-box app_container">
+                    <NavigationBar   onTopRightMenuClick={this.onTopRightMenuClick.bind(this)}/>
 
                     <div className="div_main_c">
                         <div className="left_side"  style={statusStyle} >
@@ -206,11 +221,11 @@ class Root extends React.Component {
                                 selectedKeys={[this.state.activeMenuIndex]}
                                 defaultOpenKeys={['sub1','sub2']}
                                 mode="inline"
-                               // theme="dark"
+                                theme="dark"
                                 >
                                 <SubMenu key="sub1" title={<span><Icon type="mail" /><span>账户</span></span>}>
                                     <Menu.Item key="0"><Icon type="bank" />资产</Menu.Item>
-                                    <Menu.Item key="1"><Icon type="solution" />近期活动</Menu.Item>
+                                    <Menu.Item key="1" className="lastOperate"><Icon type="solution" />近期活动</Menu.Item>
                                     <Menu.Item key="2"><Icon type="swap" />转账</Menu.Item>
                                 </SubMenu>
                                   
@@ -226,7 +241,7 @@ class Root extends React.Component {
                            </nav>
                         </div>
                         {globalLoading? <Loading/>:null}
-                        <div className="right_content" style={{display:this.state.globalLoading?'none':'block'}}  >
+                        <div className="right_content" style={{display:this.state.globalLoading?'none':'block',borderWidth:accountName?'1px':0}}  >
                              {this.props.children}
                         </div>
                     </div>

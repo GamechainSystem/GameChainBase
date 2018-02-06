@@ -27,7 +27,7 @@
   bottom: 0;
   margin: auto;
   z-index: 2001;
-  padding: .15rem;
+  padding: .15rem 0.2rem;
   background: #fff;
   border-radius: .04rem;
   box-shadow: 0 .01rem .03rem rgba(0, 0, 0, .2);
@@ -45,10 +45,9 @@
 i.i_close{
   position: absolute;
   cursor: pointer;
-  top: .1rem;
-  right: .1rem;
-  width: .32rem;
-  height: .32rem;
+  top: .16rem;
+  right: .18rem;
+  font-size: 0.28rem;
 }
 .i_close:hover{
   color: #333;  

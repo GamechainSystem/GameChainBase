@@ -113,6 +113,7 @@ class TransactionSubscriber extends BaseComponent {
         );
     }
 }
+
 TransactionSubscriber = BindToChainState(TransactionSubscriber, {keep_updating: true, show_loader: true});
 
 class TransactionContainer extends BaseComponent {

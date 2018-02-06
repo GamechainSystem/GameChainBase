@@ -100,7 +100,6 @@ class PasswordInput extends BaseComponent {
     render() {
         return (
             <div>
-
                 <div className="input-group">
                     <span className="input-group-addon" >
                       <i className="glyphicon glyphicon-lock"></i>
@@ -109,7 +108,7 @@ class PasswordInput extends BaseComponent {
                          disabled={this.state.disabledPwd}
                          onChange={this.handleChange}
                          ref="password"  
-                         placeholder={this.formatMessage("wallet_password_ph")} />
+                         placeholder={this.props.module=="import_key"?'请设置临时钱包密码':this.formatMessage("wallet_password_ph")} />
                 </div>
                 {!this.props.confirmation ? null :
                     <div className="input-group">
@@ -120,41 +119,9 @@ class PasswordInput extends BaseComponent {
                             disabled={this.state.disabledPwd}
                             onChange={this.handleChange}
                             ref="confirm_password"  
-                            placeholder={this.formatMessage("wallet_confirmPassword_ph")} />
+                            placeholder={this.props.module=="import_key"?'请确认设置的临时钱包密码':this.formatMessage("wallet_confirmPassword_ph")} />
                   </div>
                 }
-                {/* <div className="form-group">
-                    <label >{this.formatMessage("wallet_password")}</label>
-                    <input  autoComplete="off" type="password" className="form-control"   
-                       onChange={this.handleChange}
-                       ref="password"
-                       placeholder={this.formatMessage("wallet_password_ph")} />
-                </div>
-                {!this.props.confirmation ? null :
-                    <div className="form-group">
-                        <label >{this.formatMessage("wallet_confirmPassword")}</label>
-                        <input autoComplete="off" type="password" className="form-control"
-                         onChange={this.handleChange}
-                         ref="confirm_password"
-                         placeholder={this.formatMessage("wallet_confirmPassword_ph")} />
-                    </div>
-                } */}
-                {/* <div className="text-input">
-                    <div className="text-label">{this.formatMessage("wallet_password")}</div>
-                    <input autoComplete="off" type="password"
-                           onChange={this.handleChange}
-                           ref="password"
-                           placeholder={this.formatMessage("wallet_password_ph")}/>
-                </div>
-                {!this.props.confirmation ? null :
-                    <div className="text-input">
-                        <div className="text-label">{this.formatMessage("wallet_confirmPassword")}</div>
-                        <input autoComplete="off" type="password"
-                               onChange={this.handleChange}
-                               ref="confirm_password"
-                               placeholder={this.formatMessage("wallet_confirmPassword_ph")}/>
-                    </div>
-                } */}
             </div>
         );
     }

@@ -21,6 +21,8 @@ import WalletUnlockActions from "../../actions/WalletUnlockActions";
 import WalletActions from "../../actions/WalletActions";
 import ScanActions from "../../actions/ScanActions";
 
+// import AccountActions from "../../actions/AccountActions";
+
 //graphene
 import {PrivateKey, Address, Aes, PublicKey, hash} from "bitsharesjs";
 
@@ -233,9 +235,11 @@ class ImportKey extends BaseComponent {
             NotificationActions.success(`Successfully imported ${import_count} keys.`)
             this.onCancel() // back to claim balances
 
+            console.info('keys_to_account',keys_to_account,'account_names',account_names);
+
             this.context.router.push("/transfer");    
-            setTimeout(function() {
-                window.location.reload();
+            setTimeout(()=>{
+                 window.location.reload();
             }, 600);                          
         }).catch(error => {
             console.error("error:", error)
@@ -303,6 +307,7 @@ class ImportKey extends BaseComponent {
 
     onWifChange(e) {
         this.setState({wif: e.target.value});
+        this.setState({error_message: null})
     }
 
     hideQrcodeModal() {
@@ -337,11 +342,21 @@ class ImportKey extends BaseComponent {
 
         return (
             <div className="content importKey">
+                <ul className="breadcrumb" >
+                    <li>
+                        <a >钱包管理</a> 
+                    </li>
+                    <li className="active">
+                        导入私钥
+                    </li>
+                </ul>
+
                 {hasWallet ? null :
                     <PasswordInput
                         ref="password"
                         confirmation={true}
                         onChange={this.onPasswordChange.bind(this)}
+                        module="import_key"
                     />
                 }
                 <div className="input-group">
@@ -351,15 +366,10 @@ class ImportKey extends BaseComponent {
                     </span>
                     <input type="text"  className="form-control"
                             value={this.state.wif}
-                            onChange={this.onWifChange.bind(this)}         placeholder={this.formatMessage('wallet_accountPrivateKey_ph')}  />
+                            onChange={this.onWifChange.bind(this)} 
+                            placeholder={this.formatMessage('wallet_accountPrivateKey_ph')}  />
                 </div>
-                {/* <div className="text-input">
-                    <div className="text-label">{this.formatMessage('wallet_accountPrivateKey')}</div>
-                    <input value={this.state.wif}
-                           onChange={this.onWifChange.bind(this)} type="text"
-                           placeholder={this.formatMessage('wallet_accountPrivateKey_ph')}/>
-                </div> */}
-
+     
                 <div className="operate">
                     {this.props.importing ? <TextLoading/> :
                         <input className="green-btn" type="button" value={this.formatMessage('btn_ok')}

@@ -13,6 +13,8 @@ import WalletUnlockStore from "../../stores/WalletUnlockStore";
 //actions
 import WalletUnlockActions from "../../actions/WalletUnlockActions";
 
+import { Icon } from 'antd';
+
 class MemoInfo extends BaseComponent {
     static defaultProps = {
         fullLength: false
@@ -47,7 +49,7 @@ class MemoInfo extends BaseComponent {
         if (!text && isMine) {
             return (
                 <span onClick={this.unLock.bind(this)}>
-                    <a href>{this.formatMessage('transfer_memoUnlock')}</a>
+                    <a href><Icon type="key" />{this.formatMessage('transfer_memoUnlock')}</a>
                 </span>
             );
         }
@@ -60,7 +62,7 @@ class MemoInfo extends BaseComponent {
             return (
                 <span className="memo" style={{paddingTop: 5, cursor: "help"}}>
                     <span title={full_memo !== text ? full_memo : null}>
-                        {text}
+                       备注： {full_memo}
                     </span>
                 </span>
             );

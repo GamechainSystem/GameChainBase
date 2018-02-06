@@ -36,6 +36,7 @@ class FormattedAsset extends React.Component {
 
         if (asset && asset.toJS) asset = asset.toJS();
         let decimals = Math.max(0, asset.precision - decimalOffset);
+        // console.info('asset.precision',asset.precision,'decimalOffset',decimalOffset);
         let precision = utils.get_asset_precision(asset.precision);
         if (asPercentage) {
             let supply = parseInt(asset.dynamic.current_supply, 10);
@@ -46,6 +47,9 @@ class FormattedAsset extends React.Component {
                 </span>
             );
         }
+
+        // console.info('this.props.exact_amount ? amount : amount / precision',this.props.exact_amount ? amount : amount / precision);
+        // console.info('decimals',decimals);
         return (
             <span className={this.props.className} >
                 {hide_amount ? null :

@@ -40,9 +40,9 @@ html, body, #content, .full {
 }
 
 .vertical-box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
+  // display: -webkit-box;
+  // display: -moz-box;
+  // display: box;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -220,7 +220,7 @@ input {
       text-align: justify;
       text-justify: distribute-all-lines;
       text-align-last: justify;
-      font-weight: bold;
+      // font-weight: bold;
       float: left;
       margin-left: .2rem;
       margin-right: .4rem;
@@ -397,9 +397,9 @@ input {
     background-color: $whiteColor;
     color: $blackColor;
     margin-top: .02rem;
-    margin-bottom: .02rem;
-    padding-left: .2rem;
-    padding-right: .2rem;
+    // margin-bottom: .02rem;
+    // padding-left: .2rem;
+    // padding-right: .2rem;
     // height: 1.2rem;
     // line-height: 1.2rem;
     .icon {
@@ -483,7 +483,7 @@ input {
 .green-btn {
   width: 2rem;
   height: .6rem;
-  background-color: $greenColor;
+  background-color: $orangeColor;
   color: $whiteColor;
   border: none;
   font-weight: bold;
@@ -493,7 +493,7 @@ input {
 
 .orange-red-btn {
   @extend .green-btn;
-  background-color: $orangeRedColor;
+  background-color:$orangeColor;
 }
 
 .white-btn {
@@ -525,7 +525,7 @@ input {
   background-color: $whiteColor;
   color: $orangeRedColor;
   padding: .2rem;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: $fontSize;
 }
 
@@ -845,8 +845,6 @@ input {
     }
     > .last-operation-row {
       display: flex;
-      padding: .06rem .2rem;
-      border-bottom: 1px solid #efefef;
       > span {
         // width: 1.6rem;
         margin-right: 0.2rem;

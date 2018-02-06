@@ -11,6 +11,7 @@ import WalletUnlockActions from "../../actions/WalletUnlockActions";
 
 //stores
 import WalletDb from "../../stores/WalletDb";
+import WalletUnlockStore from "../../stores/WalletUnlockStore";
 
 class KeysView extends BaseComponent {
     static propTypes = {
@@ -33,11 +34,22 @@ class KeysView extends BaseComponent {
             memoPublicKey: ""
         };
     }
-
     componentWillMount(){
         this.onNameClick();
     }
-
+    componentDidMount(){
+        WalletUnlockStore.listen(this.lockStatusChange.bind(this)); 
+    }
+    componentWillUnmount() {
+        WalletUnlockStore.unlisten(this.lockStatusChange);
+    }
+    lockStatusChange(){
+        if(WalletDb.isLocked()){
+            this.setState(this.getInitState());
+        }else{
+            this.onShow();
+        }
+    }
     onNameClick(e) {
         // e.preventDefault();
         WalletUnlockActions.unlock().then(() => {
@@ -58,7 +70,6 @@ class KeysView extends BaseComponent {
         let newState = this.getInitState();
         newState.visible = true;
         newState.ownerPublicKey = (owner.keys && active.keys.size > 0) ? owner.keys.get(0) : '';
-        console.debug('newState.ownerPublicKey:', newState.ownerPublicKey)
         newState.ownerPrivateKey = (newState.ownerPublicKey !== '') ? this.toWif(newState.ownerPublicKey) : '';
         newState.activePublicKey = (active.keys && active.keys.size > 0) ? active.keys.get(0) : '';
         newState.activePrivateKey = (newState.activePublicKey !== '') ? this.toWif(newState.activePublicKey) : '';
@@ -122,7 +133,7 @@ class KeysView extends BaseComponent {
                             </li>
                         </ul>
                         <form>
-                            <div className="form-group">
+                            {/* <div className="form-group">
                                 <label >{this.formatMessage('account_owner_key')}</label>
                                 <input type="text" className="form-control" value={ownerPublicKey} placeholder="********" />
                             </div>
@@ -130,25 +141,25 @@ class KeysView extends BaseComponent {
                                 <label >{this.formatMessage('account_wif_key')}</label>
                                 <input type="text" className="form-control" value={ownerPrivateKey} placeholder="********"  />
                             </div>
-                            <br/>
+                            <br/> */}
 
-                            <div className="form-group">
+                            {/* <div className="form-group">
                                 <label >{this.formatMessage('account_active_key')}</label>
                                 <input type="text" className="form-control" value={activePublicKey} placeholder="********"  />
-                            </div>
+                            </div> */}
                             <div className="form-group">
-                                <label >{this.formatMessage('account_wif_key')}</label>
+                                <label >privatekey</label>
                                 <input type="text" className="form-control" value={activePrivateKey} placeholder="********"  />
                             </div>
-                            <br/>
-
+                            {/* <br/>
                              <div className="form-group">
                                 <label >{this.formatMessage('account_memo_key')}</label>
                                 <input type="text" className="form-control" value={memoPublicKey}  placeholder="********" />
-                            </div>
+                            </div> */}
                         </form>
                         <footer>
-                            <button onClick={this.onNameClick.bind(this)} className="uk-button uk-button-primary uk-button-large">解锁查看</button>
+                            {activePrivateKey?null:<button onClick={this.onNameClick.bind(this)} className="uk-button uk-button-primary uk-button-large">
+                            解锁查看</button>}
                         </footer>
                        
                         {/* <div className="body scroll">

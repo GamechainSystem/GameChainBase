@@ -30,8 +30,9 @@ class AccountSelectInput extends BaseComponent {
     }
 
     componentWillReceiveProps(newProps) {
-        if ((this.props.onAccountChanged && newProps.account) && newProps.account !== this.props.account)
+        if ((this.props.onAccountChanged && newProps.account) && newProps.account !== this.props.account){
             this.props.onAccountChanged(newProps.account);
+        }
     }
 
     getNameType(value) {
@@ -50,7 +51,12 @@ class AccountSelectInput extends BaseComponent {
         let newValue = value.match(/(?:#\/account\/)(.*)(?:\/overview)/);
         if (newValue) value = newValue[1];
 
-        if (this.props.onChange && value !== this.props.accountName) this.props.onChange(value);
+        let account=this.props.account ? this.props.account.get("name") : null;
+        if (this.props.onChange && value !== this.props.accountName) this.props.onChange(value,account);
+    }
+
+    getAccount(){
+        return this.props.account ? this.props.account.get("name") : null;
     }
 
     render() {
@@ -68,11 +74,12 @@ class AccountSelectInput extends BaseComponent {
          
         return (
             <div className="text-img-input">
+                <div className="div_label">{this.props.lable}</div>
                 <AccountImage account={this.props.account ? this.props.account.get("name") : null}/>
                 <div className="placeholder"></div>
                 <div className="text-box">
                     <div className="label">
-                        <span>{this.props.lable}</span><span>{member_status} {lookup_display}</span>
+                        <span>{member_status} {lookup_display}</span>
                     </div>
                     <div className="input">
                         <input type="text" onChange={this.onInputChange.bind(this)}

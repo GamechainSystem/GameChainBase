@@ -27,6 +27,9 @@ const confirm = Modal.confirm;
 
 import AccountImage from "./Utility/AccountImage";
 
+import {update_ls_sha1s} from '../common';
+
+
 class NavigationBar extends BaseComponent {
 
 
@@ -38,10 +41,10 @@ class NavigationBar extends BaseComponent {
             isShowMenu: false,
             navIndex:1,
             topRightMenus:[
-                {path:"/create-account",text:"创建账户",icon:"glyphicon-user"},
-                {path:"/settings",text:"设置",icon:"glyphicon-cog"},
-                {path:"",text:"",icon:"glyphicon-lock"},
-                {path:"",text:"",icon:"glyphicon-off"}
+                {path:"/create-account",text:"创建账户",icon:"user"},
+                {path:"/settings",text:"设置",icon:"setting"},
+                {path:"",text:"",icon:"lock"},
+                {path:"",text:"",icon:"poweroff"}
             ],
             accountsPopoverStatus:false
         };
@@ -99,6 +102,22 @@ class NavigationBar extends BaseComponent {
             return this.context.intl.formatMessage({id: "menu_index"});
         }
         if(url==="/init-error"){
+            Modal.info({
+                title: '提示',
+                content: (
+                  <div>
+                    <p>网络繁忙，请稍后再试</p>
+                  </div>
+                ),
+                okText:'确认刷新',
+                onOk:()=>{
+                    this.context.router.push('/settings');
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 250);
+                },
+             });
+
             return this.context.intl.formatMessage({id:"menu_settings"});
         }
         url = url.substring(1);
@@ -117,11 +136,14 @@ class NavigationBar extends BaseComponent {
     //()=>SettingsActions.changeSetting({setting: "locale", value: "cn"})
     onTopRightMenuClick(index){
         // console.info(e);
-        if(index==0&&AccountStore.getState().currentAccount){
-            if( AccountStore.getState().linkedAccounts.size<=1){
-              this.setState({accountsPopoverStatus:false})                  
+        let linkedAccounts_size=AccountStore.getState().linkedAccounts.size;
+        if(index==0){
+            if(linkedAccounts_size<=1){
+                this.setState({accountsPopoverStatus:false})                                  
             }
-            return;
+            if(linkedAccounts_size>0){
+                return;                
+            }
         }
 
         this.setState({
@@ -147,9 +169,8 @@ class NavigationBar extends BaseComponent {
         let current_wallet = WalletManagerStore.getState().current_wallet;
         let title = this.formatMessage('message_title');
         let msg = this.formatMessage('wallet_confirmDelete');
-        console.info("current_wallet",current_wallet);  
         let names= WalletManagerStore.getState().wallet_names;
-        console.info("names",names);
+
         WalletUnlockActions.unlock().then(() => {
            confirm({
                 title:'确认退出当前钱包吗? 请确认已备份钱包或私钥', //'确认退出当前钱包吗?',//title
@@ -160,6 +181,8 @@ class NavigationBar extends BaseComponent {
                   WalletManagerStore.onDeleteWallet(current_wallet).then(()=>{
                     // let linkedAccounts =AccountStore.getState().linkedAccounts.toArray().sort();
                     // AccountActions.setCurrentAccount.defer(linkedAccounts.length?linkedAccounts[0]:null);  
+                    update_ls_sha1s(current_wallet);
+
                     AccountActions.setCurrentAccount.defer(null); 
                     if (names.size > 1) {
                         let wn = null;
@@ -202,20 +225,23 @@ class NavigationBar extends BaseComponent {
     }
     render() {
         let titleClass = "top-title";
-        // if (this.context.router.location.pathname == "/init-error") {
-        //     return (
-        //         <div className="header">
-        //             <div className={titleClass}>{this.getTitle()}</div>
-        //         </div>
-        //     );
-        // }
+        let pathname=this.context.router.location.pathname;
+        if (pathname == "/init-error") {
+            this.getTitle()
+            // return (
+            //     <div className="header">
+            //         <div className={titleClass}>{this.getTitle()}</div>
+            //     </div>
+            // );
+        }
         let props = this.props;
         //console.debug(this.context.router);
         let backBtn = null;
-        if (this.context.router.location.pathname !== "/") {
+        if (pathname !== "/") {
             backBtn = (<div className="top-back" onClick={this.onBackClick.bind(this)}>&lt;</div>);
         } else {
             titleClass = "top-left-title";
+            // this.context.router.push('/last-operate');
         }
         let accountName=AccountStore.getState().currentAccount
         let statusStyle={
@@ -226,8 +252,8 @@ class NavigationBar extends BaseComponent {
 
         let accounts=(
             <ul className="ul_accounts">
-                 {names.map(accountNameItem=>{
-                     return (<li className={accountNameItem==accountName?"current-account":null} onClick={this.onAccountItemClick.bind(this,accountNameItem)} ><AccountImage account={accountNameItem}/> {accountNameItem}</li>)
+                 {names.map((accountNameItem,index)=>{
+                     return (<li key={index} className={accountNameItem==accountName?"current-account":null} onClick={this.onAccountItemClick.bind(this,accountNameItem)} ><AccountImage account={accountNameItem}/> {accountNameItem}</li>)
                  })}
                 {/* <li><AccountImage account={accountName}/> {accountName}</li> */}
            </ul>
@@ -235,7 +261,7 @@ class NavigationBar extends BaseComponent {
         return (
          <nav className="navbar navbar-default"  role="navigation"  >
             <div className="navbar-header">
-               <a className="navbar-brand" href="#"></a>
+               <a className="navbar-brand" ></a>
             </div>
 
             {/* <div className="collapse navbar-collapse"> */}
@@ -253,9 +279,9 @@ class NavigationBar extends BaseComponent {
                         this.state.topRightMenus.map((item,index)=>{
                             
                             return (
-                               <li  onClick={this.onTopRightMenuClick.bind(this,index)} className={this.state.navIndex==index?"active":null} >
+                               <li key={index}  onClick={this.onTopRightMenuClick.bind(this,index)} className={this.state.navIndex==index?"active":null} >
                                     {  index!=0?(<a className="li_a" >
-                                                { index!=2?(<i className={`glyphicon ${item.icon}`}></i>):(<Icon type={this.props.locked?'lock':'unlock'} />) }
+                                                { index!=2?(<Icon type={item.icon} />):(<Icon type={this.props.locked?'lock':'unlock'} />) }
                                                 <span> {item.text} </span>
                                             </a>):<Popover placement="bottom"  title='账户列表'
                                             visible={this.state.accountsPopoverStatus}
@@ -263,7 +289,7 @@ class NavigationBar extends BaseComponent {
                                             onVisibleChange={this.handleVisibleChange}
                                             trigger="click">
                                                     <a className="li_a" >
-                                                        {accountName?<AccountImage account={accountName}/>:<i className="glyphicon glyphicon-user"></i>}
+                                                        {accountName?<AccountImage account={accountName}/>:<Icon type="user"/>}
                                                         <span>{accountName||"创建账户"} </span>
                                                     </a>
                                          </Popover>}

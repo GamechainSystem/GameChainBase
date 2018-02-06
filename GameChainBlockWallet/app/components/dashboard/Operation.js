@@ -15,9 +15,16 @@ import MemoInfo from "../Blockchain/MemoInfo";
 import FormattedPrice from "../Utility/FormattedPrice";
 import AccountName from "../Utility/AccountName";
 
+import {Apis} from "bitsharesjs-ws";
+
+//actions
+import AccountActions from "../../actions/AccountActions";
+
+
 const {operations} = grapheneChainTypes;
 let ops = Object.keys(operations);
 let listings = account_constants.account_listing;
+
 
 class Info extends BaseComponent {
     static propTypes = {
@@ -48,7 +55,25 @@ class Info extends BaseComponent {
         let id = "trxTypes_" + ops[type];
         return id;
     }
+    getBlockInfo(block_num){
+        console.info('block_num',block_num);
 
+        Apis.instance().db_api().exec("get_block", [
+            block_num
+        ])
+        .then((result) => {
+            if (!result) {
+                return false;
+            }
+            result.id = block_num; // The returned object for some reason does not include the block height..
+           
+            AccountActions.setCurrentBlockInfo(result)
+
+            console.info('result',result);
+        }).catch((error) => {
+            console.log("Error in BlockchainActions.getBlock: ", error);
+        });
+    }
     render() {
         let {block, fee, type} = this.props;
 
@@ -69,8 +94,9 @@ class Info extends BaseComponent {
                 <p className="p_sxf"><FormattedAsset amount={fee.amount} asset={fee.asset_id}/>
                         {pending ? <span> - {pending}</span> : null}</p>
                 <p>
-                        <BlockTime block_number={block}/> 
-                 </p>
+                   <BlockTime block_number={block}/> 
+               </p>
+                <p className="lookup_block" onClick={this.getBlockInfo.bind(this,block)} >查看</p>
             </div>
         );
     }
@@ -184,7 +210,7 @@ class Operation extends BaseComponent {
                                         type: "amount",
                                         value: op[1].amount,
                                         arg: "amount",
-                                        decimalOffset: op[1].amount.asset_id === "1.3.0" ? 5 : null
+                                        decimalOffset: op[1].amount.asset_id === "1.3.0" ? 0 : null
                                     },
                                     {type: "account", value: op[1].to, arg: "to"}
                                 ]
@@ -697,6 +723,7 @@ class RecentTransactions extends BaseComponent {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
+
         if (!utils.are_equal_shallow(this.props.accountsList, nextProps.accountsList)) return true;
         if (nextState.limit !== this.state.limit) return true;
         return false;
@@ -712,9 +739,12 @@ class RecentTransactions extends BaseComponent {
         let history = [];
         let seen_ops = new Set();
         for (let account of accountsList) {
+            // console.info('account',account.toJS());
             if (account) {
                 let h = account.get("history");
-                if (h) history = history.concat(h.toJS().filter(op => !seen_ops.has(op.id) && seen_ops.add(op.id)));
+                if (h) {
+                    history = history.concat(h.toJS().filter(op => !seen_ops.has(op.id) && seen_ops.add(op.id)));   
+                }
             }
         }
         if (filterOp) {
@@ -745,9 +775,10 @@ class RecentTransactions extends BaseComponent {
         let {limit} = this.state;
         let {accountsList} = this.props;
         let current_account_id = accountsList.length === 1 && accountsList[0] ? accountsList[0].get("id") : null;
-        let history = this.getHistory(accountsList).sort(compareOps);
-        let historyCount = history.length;
 
+        console.info('accountsList',JSON.parse(JSON.stringify(accountsList)));
+        let history =this.getHistory(accountsList).sort(compareOps);
+        let historyCount = history.length;
         const display_history = history.length ?
             history.slice(0, limit)
                 .map(o => {
@@ -764,7 +795,7 @@ class RecentTransactions extends BaseComponent {
         return (
             <div className="last-operation-body vertical-flex scroll">
                 {display_history}
-                {historyCount > this.props.limit || 20 && limit < historyCount ? (
+                {historyCount > (this.props.limit || 20) && limit < historyCount ? (
                     <div className="last-operation-row">
                         <input type="button" value={this.formatMessage('account_more')} className="green-btn"
                                onClick={this.getMore.bind(this)} style={{flex: 1}}/>

@@ -48,22 +48,26 @@ class AccountActions {
         return name;
     }
 
+    setCurrentBlockInfo(block) {
+        return block;
+    }
+
     setGlobalLoading(b) {
         return b;
     }
     /**
      *  TODO:  This is a function of teh wallet_api and has no business being part of AccountActions
      */
-    transfer(from_account, to_account, amount, asset, memo, propose_account = null, fee_asset_id = "1.3.0") {
+    transfer(from_account, to_account, amount, asset, memo, propose_account = null, fee_asset_id = "1.3.0",isOnlyGetFee=false) {
         // Set the fee asset to use
         fee_asset_id = accountUtils.getFinalFeeAsset(propose_account || from_account, "transfer", fee_asset_id);
+
         try {
             return (dispatch) => {
                 return application_api.transfer({
-                    from_account, to_account, amount, asset, memo, propose_account, fee_asset_id
+                    from_account, to_account, amount, asset, memo, propose_account, fee_asset_id,isOnlyGetFee
                 }).then(result => {
                     // console.log( "transfer result: ", result )
-
                     dispatch(result);
                 });
             };

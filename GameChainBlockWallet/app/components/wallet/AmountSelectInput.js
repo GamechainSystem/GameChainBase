@@ -138,6 +138,7 @@ class AmountSelector extends BaseComponent {
         //console.debug('balance==',this.props.balance)
         let value = this.formatAmount(this.props.amount);
 
+        // if (this.props.assets.length === 0) return null;
 
         return (
             <div className="text-img-input">

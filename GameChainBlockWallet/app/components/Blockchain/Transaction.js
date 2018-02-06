@@ -78,7 +78,6 @@ class Transaction extends BaseComponent {
 
         let opCount = trx.operations.length;
         let memo = null;
-
         trx.operations.forEach((op, opIndex) => {
 
             let rows = [];
@@ -114,8 +113,8 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} >
-                            <span className="gray">{this.formatMessage('transfer_amount')}</span>
+                        <div key={key++} className="transfer_amount" >
+                            <span className="gray transfer_amount">{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount.amount} asset={op[1].amount.asset_id}/>
                         </div>
                     );
@@ -559,7 +558,7 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount_to_burn.amount} asset={op[1].amount_to_burn.asset_id}/>
                         </div>
@@ -581,7 +580,7 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount} asset="1.3.0"/>
                         </div>
@@ -605,7 +604,7 @@ class Transaction extends BaseComponent {
                     );
 
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount.amount} asset={op[1].amount.asset_id}/>
                         </div>
@@ -739,7 +738,7 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount.amount} asset={op[1].amount.asset_id}/>
                         </div>
@@ -754,7 +753,7 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount.amount} asset={op[1].amount.asset_id}/>
                         </div>
@@ -916,7 +915,7 @@ class Transaction extends BaseComponent {
                         </div>
                     );
                     rows.push(
-                        <div key={key++} className="row">
+                        <div key={key++} className="row transfer_amount">
                             <span>{this.formatMessage('transfer_amount')}</span>
                             <FormattedAsset amount={op[1].amount_to_reserve.amount}
                                             asset={op[1].amount_to_reserve.asset_id}/>

@@ -1,3 +1,7 @@
+/**
+ * Created by xiangxn on 2017/10/17.
+ */
+
 import alt from "../../common/altObj";
 
 class ScanActions {

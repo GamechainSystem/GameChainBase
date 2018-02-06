@@ -25,9 +25,17 @@ import { Select,InputNumber,Button,Modal } from 'antd';
 const Option = Select.Option;
 const confirm = Modal.confirm;
 
+import {update_ls_sha1s} from '../common';
+
 class GlobalSetting extends BaseComponent {
     constructor(props) {
         super(props);
+        this.state = {
+            isRefresh:false
+        };
+
+        this.state.sel_current_wallet=WalletManagerStore.getState().current_wallet;
+
     }
 
     //修改语言
@@ -57,8 +65,8 @@ class GlobalSetting extends BaseComponent {
         }, 250);
     }
 
-    onUnitChange(d) {
-        SettingsActions.changeSetting({setting: "unit", value: d.value});
+    onUnitChange(value) {
+        SettingsActions.changeSetting({setting: "unit", value: value});
     }
 
     onLockTimeChange(d) {
@@ -124,48 +132,54 @@ class GlobalSetting extends BaseComponent {
     }
 
     onWalletChange(item) {
-        WalletActions.setWallet(item.value).then((a)=>{            
+        this.setState({sel_current_wallet:item.value});
+    }
+
+    changeCurrentWallet(){
+        WalletActions.setWallet(this.state.sel_current_wallet).then((a)=>{
+            NotificationActions.success("已切换到钱包" + this.state.sel_current_wallet);
             let linkedAccounts =AccountStore.getState().linkedAccounts.toArray().sort();
-            console.info(linkedAccounts);
             if(linkedAccounts.length){
                 AccountActions.setCurrentAccount.defer(linkedAccounts[0]);    
             }
-            //else{
-            //     AccountStore.tryToSetCurrentAccount();                        
-            // }  
-        });
 
-        
+            this.setState({isRefresh:!this.state.isRefresh})
+        });  
     }
+
     onDeleteWallet(item){
         let current_wallet = WalletManagerStore.getState().current_wallet;
+
+        item={value:this.state.sel_current_wallet};
+
         let title = this.formatMessage('message_title');
         let msg = this.formatMessage('wallet_confirmDelete');
-        console.info("current_wallet",current_wallet);  
         let names= WalletManagerStore.getState().wallet_names;
-        console.info("names",names);
+
         WalletUnlockActions.unlock().then(() => {
            confirm({
                 title:'确认退出当前钱包吗? 请确认已备份钱包或私钥',
                 onOk:()=>{
-                   AccountActions.setGlobalLoading.defer(true);   
-                 
-                  WalletManagerStore.onDeleteWallet(item.value).then(()=>{
-                     AccountActions.setCurrentAccount.defer(null); 
-                    if (names.size > 1) {
-                        let wn = null;
-                        names.forEach(name => {
-                            if (name !== item.value) {
-                                wn = name;
-                            }
-                        });
-                        if (wn) WalletActions.setWallet(wn);
-                    }
+                    AccountActions.setGlobalLoading.defer(true);   
 
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 1000); 
-                  }); 
+                    update_ls_sha1s(item.value);
+
+                    WalletManagerStore.onDeleteWallet(item.value).then(()=>{
+                        AccountActions.setCurrentAccount.defer(null); 
+                        if (names.size > 1) {
+                            let wn = null;
+                            names.forEach(name => {
+                                if (name !== item.value) {
+                                    wn = name;
+                                }
+                            });
+                            if (wn) WalletActions.setWallet(wn);
+                        }
+
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000); 
+                    }); 
                 }
               });
         });
@@ -178,13 +192,11 @@ class GlobalSetting extends BaseComponent {
         });
 
         let saveApi = this.props.settings.get('apiServer');
-		console.info('saveApi');
-		console.info(saveApi)
+
         let api = this.props.defaults.apiServer.find((a) => {
             if (a.value === saveApi) return a;
         });
-		console.info('this.props.defaults.apiServer');
-		console.info(this.props.defaults.apiServer)
+
         let faucet_address = this.props.settings.get('faucet_address');
         let faucets = this.props.defaults.apiFaucets;//[{value: faucet_address, text: faucet_address}];
 
@@ -206,20 +218,35 @@ class GlobalSetting extends BaseComponent {
             wallets.push({text: name, value: name});
         });
         let current_wallet = WalletManagerStore.getState().current_wallet;
+        let sel_current_wallet=this.state.sel_current_wallet;
         return (
             <div className="vertical-flex scroll setting_home">
+                <ul className="breadcrumb" style={{marginBottom:"0"}}>
+                    <li>
+                        <a >设置</a> 
+                    </li>
+                </ul>
                 {/* <XNSelect label={this.formatMessage('settings_labLanguage')}
                           onChange={this.onLanguageChange.bind(this)}
                           data={locales}
-                          value={this.formatMessage('languages_' + this.props.settings.get('locale'))}/> */}
-                {/* <div className="separate"></div> */}
-                {/* this.formatMessage('settings_labAPI') */}
-           
-                {current_wallet?<XNSelect isDelete={true} data={wallets} label={this.formatMessage('settings_currentWallet')}
-                        value={current_wallet}
+                          value={this.formatMessage('languages_' + this.props.settings.get('locale'))}/>
+                <div className="separate"></div>
+                this.formatMessage('settings_labAPI') */}
+             <div className="common_setting">
+                {current_wallet?<XNSelect isDelete={false} data={wallets} label={this.formatMessage('settings_currentWallet')}
+                        value={sel_current_wallet}
                         onChange={this.onWalletChange.bind(this)}
                         onDeleteItem={this.onDeleteWallet.bind(this)}
                 />:null}
+
+                {current_wallet?<div className="div_wallet_btn">
+                    <Button type="primary"onClick={this.onDeleteWallet.bind(this)} icon="delete" size="large" ghost>删除当前钱包</Button>   
+
+                    {sel_current_wallet!=current_wallet?<Button icon="retweet"  size="large"
+                     onClick={this.changeCurrentWallet.bind(this)} type="primary"  ghost  >
+                            切换到当前钱包
+                    </Button>:null}
+                </div>:null}
 
                 <XNSelect label="接入点"
                           onChange={this.onAPIChange.bind(this)} isDelete={false} isAdd={false}
@@ -242,9 +269,6 @@ class GlobalSetting extends BaseComponent {
                     </Select>   
                  </div>
                 {isInitError ? null : (<div>
-                    {/* <div className="separate"></div> */}
-                    {/* <XNSelect label={this.formatMessage('settings_labShowUnit')}
-                              onChange={this.onUnitChange.bind(this)} value={unit} data={units}/> */}
 
                     <div className="div_label" >
                       {this.formatMessage('settings_labShowUnit')}
@@ -257,33 +281,27 @@ class GlobalSetting extends BaseComponent {
                             }
                         </Select>   
                     </div>
-                    <div className="div_label" >
-                        {this.formatMessage('settings_labLockTime')}        
-                    </div>
-                    {current_wallet?<div className="div-select-input" > 
-                        <InputNumber size="large" defaultValue={walletLockTimeout} onChange={this.onLockTimeChange.bind(this)} />   
-                   </div>:null}       
-                    {/* <XNFullText label={this.formatMessage('settings_labLockTime')} type="number"
-                                onChange={this.onLockTimeChange.bind(this)} value={walletLockTimeout}/> */}
-   
+                   
+                    {/* {current_wallet?(<div>
+                            <div className="div_label" >
+                                {this.formatMessage('settings_labLockTime')}        
+                            </div>
+                            <div className="div-select-input" > 
+                                <InputNumber size="large" defaultValue={walletLockTimeout} onChange={this.onLockTimeChange.bind(this)} />   
+                             </div>
+                        </div>):null}        */}
+       
 
-
-                    {/* <XNFullButton label={this.formatMessage('settings_labShowWalletManage')}
-                                  onClick={this.onShowWalletManageClick.bind(this)}/> */}
-                    {/* <XNFullButton isShowIcon={false}
-                                  label={this.formatMessage('settings_labDefaultSetting')}
-                                  onClick={this.onSetDefaultClick.bind(this)}/> */}
-
-
-                    { AccountStore.getState().currentAccount?  <Button type="primary"    onClick={this.onBackupClick.bind(this)} icon="export" size="large" ghost>{this.formatMessage('wallet_backup')}</Button>:null}             
+                    {/* { AccountStore.getState().currentAccount?  <Button type="primary"    onClick={this.onBackupClick.bind(this)} icon="export" size="large" ghost>{this.formatMessage('wallet_backup')}</Button>:null}             
                        
 
                     <Button type="primary"  onClick={this.onImportBackupClick.bind(this)} icon="switcher" size="large" ghost>{this.formatMessage('wallet_importBackup')}</Button>     
 
-                    <Button type="primary" onClick={this.onImportKeyClick.bind(this)} icon="login" size="large" ghost>{this.formatMessage('wallet_importKey')}</Button>
+                    <Button type="primary" onClick={this.onImportKeyClick.bind(this)} icon="login" size="large" ghost>{this.formatMessage('wallet_importKey')}</Button> */}
 
                     <Button type="primary"    onClick={this.onSetDefaultClick.bind(this)} icon="setting" size="large" ghost>{this.formatMessage('settings_labDefaultSetting')}</Button>    
                 </div>)}
+              </div>
             </div>
         );
     }

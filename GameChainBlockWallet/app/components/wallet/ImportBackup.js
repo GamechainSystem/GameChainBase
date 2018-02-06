@@ -38,7 +38,16 @@ class ImportBackup extends BaseComponent {
 
     constructor(props) {
         super(props);
-        this.state = {verified: false, accept: false, new_wallet: ''};
+        this.state = {
+            verified: false,
+            accept: false, 
+            new_wallet: '',
+            steps:[
+                {stepText:"选择钱包文件"},
+                {stepText:"输入钱包密码"},
+                {stepText:"确认导入钱包"}
+            ]
+        };
     }
 
     onSelectClick(e) {
@@ -48,7 +57,7 @@ class ImportBackup extends BaseComponent {
 
     onFileUpload(e) {
         let file = e.target.files[0];
-        console.debug('onFileUpload',file);
+        // console.debug('onFileUpload',file);
         BackupActions.incommingWebFile(file);
         this.forceUpdate();
     }
@@ -59,48 +68,73 @@ class ImportBackup extends BaseComponent {
 
     onRestore(e) {
         e.preventDefault();
+
+        let {backup,wallet} = this.props;
+
+        let has_current_wallet = !!wallet.current_wallet
+        let wallet_name="";
+        if (!has_current_wallet) {
+            wallet_name="default";
+        }else if(backup.name){
+            wallet_name= backup.name.match(/[a-z0-9_-]*/)[0];
+        }
+     
+        let ls_sha1s=localStorage.getItem("sha1s");
+        let isExist=false;
+        if(ls_sha1s){
+            ls_sha1s=JSON.parse(ls_sha1s);
+            isExist=ls_sha1s.some(item=>{
+                return item.sha1==backup.sha1;
+            })
+        }else{
+            ls_sha1s=[];
+        }
+
+    
+
         let pass = this.refs.password.value;
         let private_key = PrivateKey.fromSeed(pass || "");
         let contents = this.props.backup.contents;
+
         decryptWalletBackup(private_key.toWif(), contents).then(wallet_object => {
-            console.info(wallet_object);
+            if(isExist){
+                warning("该钱包已经导入,请勿重复导入");
+                return;
+            }else{
+                ls_sha1s.push({
+                    wallet_name:wallet_name,
+                    sha1:backup.sha1
+                })
+    
+                localStorage.setItem("sha1s",JSON.stringify(ls_sha1s));
+            }
+            
             BackupStore.setWalletObjct(wallet_object);
             this.setState({verified: true});
             this.checkNewName();
         }).catch(error => {
             console.error("Error verifying wallet " + this.props.backup.name, error, error.stack);
-            if (error === "invalid_decryption_key")
-                // NotificationActions.error(this.formatMessage('wallet_createErrMsg6'));
+            if (error === "invalid_decryption_key"){
                 warning(this.formatMessage('wallet_createErrMsg6'))
-            else
-                // NotificationActions.error("" + error);
+            }
+            else{
                 warning("" + error)
-                
+            }     
         })
     }
 
     checkNewName() {
         let has_current_wallet = !!this.props.wallet.current_wallet
-        console.info(!has_current_wallet);
      
         if (!has_current_wallet) {
             let name = "default";
             WalletManagerStore.setNewWallet(name);
-            console.info('  WalletManagerStore.setNewWallet(name); ')
-            console.info(name);
-
-            console.debug(this.props.backup.wallet_object)
-            console.info(' name, this.props.backup.wallet_object ')
-            console.info(name);
-            console.info(this.props.backup.wallet_object);
-
+ 
             WalletActions.restore(name, this.props.backup.wallet_object);
           
             this.setState({accept: true, new_wallet: name});
         }
-        console.info('this.props.backup')
-        console.info(this.props.backup)
-        console.info(this.state.new_wallet)
+
         if (has_current_wallet && this.props.backup.name && !this.state.new_wallet) {
             let new_wallet = this.props.backup.name.match(/[a-z0-9_-]*/)[0];
             if (new_wallet)
@@ -119,24 +153,17 @@ class ImportBackup extends BaseComponent {
 
     onAccept(e) {
         e.preventDefault();
-        this.setState({accept: true});
 
-        console.info('   WalletManagerStore.setNewWallet(this.state.new_wallet);        ')
-        console.info(this.state.new_wallet);
+        this.setState({accept: true});
 
         WalletManagerStore.setNewWallet(this.state.new_wallet);
         WalletActions.restore(this.state.new_wallet, this.props.backup.wallet_object);
 
-    
-
-        console.info('WalletActions.restore(this.state.new_wallet, this.props.backup.wallet_object ')
-        console.info(this.state.new_wallet);
-        console.info(this.props.backup.wallet_object);
-        console.info(this.props.backup.wallet_object.linked_accounts[0].name);
         // this.reset();
         // this.pageReload();
     }
     pageReload(){        
+        this.reset();
         this.context.router.push("/transfer");
         // setTimeout(function() {
         //     window.location.reload();
@@ -207,8 +234,7 @@ class ImportBackup extends BaseComponent {
         }else{
             content= <div className="content">
                 <div className="message-box">
-                    {checkMsg} 
-                    <p className="text-muted">备份文件不会上传至远端服务器，只在本地浏览器中进行处理</p>
+                    <p className="text-muted"> {checkMsg}  备份文件不会上传至远端服务器，只在本地浏览器中进行处理</p>
                 </div>
                 {!check ? null :
                     <div className="operate">
@@ -225,11 +251,31 @@ class ImportBackup extends BaseComponent {
 
         return (
             <div className="content_import-backup" >
-                  <Steps current={stepIndex}>
+                 <ul className="breadcrumb" style={{marginBottom:"0"}}>
+                        <li>
+                            <a >钱包管理</a> 
+                        </li>
+                        <li className="active">
+                            恢复备份
+                        </li>
+                  </ul>
+                  <div className="div_steps">
+                    {
+                        this.state.steps.map((item,index)=>{
+                            return (<div className={"step "+(index<=stepIndex?'active_step':'')} key={index}>
+                                        <div className="div_bg">
+                                           {index+1}  
+                                        </div>  
+                                        <p>{item.stepText}</p>  
+                                    </div>  )
+                        })
+                    }
+                  </div>
+                  {/* <Steps current={stepIndex}>
                         <Step title="选择钱包文件"  />
                         <Step title="输入钱包密码"  />
                         <Step title="成功导入钱包"  />
-                  </Steps> 
+                  </Steps>  */}
                   {content}    
             </div>
         );

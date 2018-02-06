@@ -44,7 +44,9 @@ class Transfer extends BaseComponent {
             feeAsset: null,
             fee_asset_id: "1.3.0",
             maxSendAmount:0,
-            isSetMaxSendAmount:false
+            isSetMaxSendAmount:false,
+
+            transfer_memo_fee:0
         };
     };
 
@@ -57,6 +59,7 @@ class Transfer extends BaseComponent {
 
         this.onTrxIncluded = this.onTrxIncluded.bind(this);
     }
+
     init(){
         let {query} = this.props.location;
         
@@ -76,6 +79,9 @@ class Transfer extends BaseComponent {
         //if (!this.state.from_name&& query.to !== currentAccount )// 
         this.state.from_name = currentAccount;
 
+        // console.info('this.state.isSetMaxSendAmount',this.state.isSetMaxSendAmount);
+        this.state.isSetMaxSendAmount=false;
+
         if (query.to) {
             this.state.to_name = query.to;
             ChainStore.getAccount(query.to);
@@ -90,10 +96,21 @@ class Transfer extends BaseComponent {
 
     componentWillUnmount() {
         AccountStore.unlisten(this.init);
+        // AccountStore.unlisten(this.onFeeAmountChange);
     }
-
+    // onFeeAmountChange(){
+    //     let transaction=TransactionConfirmStore.getState().transaction;
+    //     if('isOnlyGetFee' in transaction&&transaction.isOnlyGetFee){
+    //         console.info('transaction111',transaction);
+    //         let fee=Number(transaction.operations[0][1].fee.amount);
+    //         if(!isNaN(fee)){
+    //             this.setState({transfer_memo_fee:fee});
+    //         }
+    //     }
+    // }
     componentDidMount(){
-        AccountStore.listen(this.init.bind(this));         
+        AccountStore.listen(this.init.bind(this));        
+        // TransactionConfirmStore.listen(this.onFeeAmountChange.bind(this)); 
     }
 
     onFromAccChange(from_account) {
@@ -110,7 +127,7 @@ class Transfer extends BaseComponent {
         this.setState({to_account, error: null});
     }
 
-    onToChange(to_name) {
+    onToChange(to_name,to_account) {
         this.setState({to_name, error: null});
     }
 
@@ -126,6 +143,7 @@ class Transfer extends BaseComponent {
 
     onMemoChanged(e) {
         this.setState({memo: e.target.value});
+        // console.info('this.onDoTransfer(e,true)',this.onDoTransfer(e,true));
     }
 
     onFeeChanged({asset}) {
@@ -147,15 +165,13 @@ class Transfer extends BaseComponent {
      */
     onBalanceClick(asset_id, balance_id, fee, fee_asset_id, e,isSetAmount=true) {
         let balanceObject = ChainStore.getObject(balance_id);
-        console.info("asset_id",asset_id)
         let transferAsset = ChainStore.getObject(asset_id);
       //  let feeAsset = ChainStore.getObject(fee_asset_id);
         if (balanceObject) {
-            console.info("transferAsset",transferAsset);
             
             let amount = utils.get_asset_amount(balanceObject.get("balance"), transferAsset);
-            console.info("amount",amount);
             amount = parseFloat((amount - (asset_id === fee_asset_id ? fee : 0)).toFixed(8));
+
             if(isSetAmount){
                 this.setState({amount});                
             }else{
@@ -177,15 +193,46 @@ class Transfer extends BaseComponent {
         }
     }
 
-    onDoTransfer(e) {
-        e.preventDefault();
+    onDoTransfer(e,isOnlyGetFee=false) {
+        // e.preventDefault();
         this.setState({error: null});
         let asset = this.state.asset;
 
-        if(!asset){
+        let account_balances = this.state.from_account.get("balances").toJS();
+        let asset_types = Object.keys(account_balances);
+
+        let {from_name,to_name,to_account,from_account}=this.state;
+
+        if(!from_account){
+            warning('请输入支付的账户名');
+            return;
+        }
+
+        if(from_account.get('name')!=from_name&&from_account.get('id')!=from_name){
+            warning('请输入正确的支付账户名');
+            return;
+        }
+
+        if(!to_account){
+            warning('请输入收款的账户名');
+            return;
+        }
+
+        if(to_account.get('name')!=to_name&&to_account.get('id')!=to_name){
+            warning('请输入正确的收款账户名');
+            return;
+        }
+
+        if(from_name==to_name){
+            warning('支付账户名和收款账户名不能相同');
+            return;
+        }
+
+        if(!asset||!asset_types.length){
             warning('请检查您的资产');
             return;
         }
+
         let precision = utils.get_asset_precision(asset.get("precision"));
         let amount = (this.state.amount+"").replace(/,/g, "");
 
@@ -198,20 +245,12 @@ class Transfer extends BaseComponent {
             warning(`可用余额不足,可用余额${this.state.maxSendAmount}`);
             return;
         }
-
-        // Modal.confirm({
-        //     title: '提示',
-        //     content: e.message+",是否重新加载",
-        //     okText: '确认',
-        //     cancelText: '取消',
-        //     onOk() {
-        //         window.location.reload();
-        //     }
-        //   });
-        if(!WalletUnlockStore.getState().locked){
-            WalletUnlockActions.unlock()
+        
+        if(amount<=0){
+            warning('请输入正确的转账金额');
+            return;
         }
-
+        
         AccountActions.transfer(
             this.state.from_account.get("id"),
             this.state.to_account.get("id"),
@@ -219,7 +258,8 @@ class Transfer extends BaseComponent {
             asset.get("id"),
             this.state.memo ? new Buffer(this.state.memo, "utf-8") : this.state.memo,
             this.state.propose ? this.state.propose_account : null,
-            this.state.feeAsset ? this.state.feeAsset.get("id") : "1.3.0"
+            this.state.feeAsset ? this.state.feeAsset.get("id") : "1.3.0",
+            isOnlyGetFee
         ).then(() => {
             TransactionConfirmStore.unlisten(this.onTrxIncluded);
             TransactionConfirmStore.listen(this.onTrxIncluded);
@@ -228,7 +268,6 @@ class Transfer extends BaseComponent {
             console.error("error: ", e, msg);
             this.setState({error: msg});
         });
-
     }
 
     render() {
@@ -236,7 +275,8 @@ class Transfer extends BaseComponent {
         let from_error = null;
         let {
             from_account, to_account, asset, asset_id, propose,
-            amount, error, to_name, from_name, memo, feeAsset, fee_asset_id
+            amount, error, to_name, from_name, memo, feeAsset, fee_asset_id,
+            transfer_memo_fee
         } = this.state;
         //console.debug('state:', this.state)
         let from_my_account = AccountStore.isMyAccount(from_account);
@@ -249,11 +289,15 @@ class Transfer extends BaseComponent {
         let balance = null;       
         
         let globalObject = ChainStore.getObject("2.0.0");
-        let fee = utils.estimateFee("transfer", null, globalObject);
-        
+        // console.info('globalObject',globalObject);
+        let fee =transfer_memo_fee||utils.estimateFee("transfer", null, globalObject);
+
         if (from_account && from_account.get("balances") && !from_error) {
+
             let account_balances = from_account.get("balances").toJS();
             asset_types = Object.keys(account_balances).sort(utils.sortID);
+            // console.info('asset_types111',asset_types);
+
             fee_asset_types = Object.keys(account_balances).sort(utils.sortID);
             for (let key in account_balances) {
                 let asset = ChainStore.getObject(key);
@@ -286,12 +330,17 @@ class Transfer extends BaseComponent {
             if (core) {
                 fee = utils.limitByPrecision(utils.get_asset_amount(fee, feeAsset || core), feeAsset ? feeAsset.get("precision") : core.get("precision"));
             }
+
+            // console.info('asset_types2222',asset_types);
+
             if (asset_types.length > 0) {
                 let current_asset_id = asset ? asset.get("id") : asset_types[0];
                 let feeID = feeAsset ? feeAsset.get("id") : "1.3.0";
                 let accBalance = account_balances[current_asset_id];
 
                 let balanceObject = ChainStore.getObject(accBalance);
+
+
                 if(ChainStore.getObject(current_asset_id)&&this.state.from_name&&balanceObject.get("balance")&&this.state.isSetMaxSendAmount==false){
                     this.onBalanceClick(current_asset_id, accBalance, fee, feeID,null,false); 
                 }
@@ -316,6 +365,7 @@ class Transfer extends BaseComponent {
         if (!from_account || !to_account || !amount || amount === "0" || !asset || from_error)
             submitButtonClass = "disabled-btn";
 
+            // console.info('asset_types2222',asset_types);
         return (
             <div className="content content_transfer">
                  <ul className="breadcrumb" >
@@ -327,27 +377,37 @@ class Transfer extends BaseComponent {
                     </li>
                 </ul>
                 <div className="div_main_body">
-                    <AccountSelectInput
-                        lable={this.formatMessage('transfer_from')}
-                        placeholder={this.formatMessage('transfer_from_ph')}
-                        account={from_name}
-                        accountName={from_name}
-                        error={from_error}
-                        onChange={this.onFromChange.bind(this)} onAccountChanged={this.onFromAccChange.bind(this)}/>
-                    <AccountSelectInput
-                        lable={this.formatMessage('transfer_to')}
-                        placeholder={this.formatMessage('transfer_to_ph')}
-                        account={to_name}
-                        accountName={to_name}
-                        onChange={this.onToChange.bind(this)} onAccountChanged={this.onToAccChange.bind(this)}/>
-                    <AmountSelector
+                    <div className="transfer_user">
+                        <AccountSelectInput
+                            lable={this.formatMessage('transfer_from')}
+                            placeholder={this.formatMessage('transfer_from_ph')}
+                            account={from_name}
+                            accountName={from_name}
+                            error={from_error}
+                            onChange={this.onFromChange.bind(this)} onAccountChanged={this.onFromAccChange.bind(this)}/>
+                        
+                            <div className="div_icon">
+                                <i className="glyphicon glyphicon-forward" ></i>
+                            </div>
+                       
+                        <AccountSelectInput
+                            ref="transfer_to"
+                            lable={this.formatMessage('transfer_to')}
+                            placeholder={this.formatMessage('transfer_to_ph')}
+                            account={to_name}
+                            accountName={to_name}
+                            onChange={this.onToChange.bind(this)} onAccountChanged={this.onToAccChange.bind(this)}/>
+                    </div>
+
+                    {asset_types.length?<AmountSelector
                         label={this.formatMessage('transfer_amount')}
                         amount={amount}
                         onChange={this.onAmountChanged.bind(this)}
                         asset={asset_types.length > 0 && asset ? asset.get("id") : ( asset_id ? asset_id : asset_types[0])}
                         assets={asset_types}
                         balance={balance}
-                        placeholder={this.formatMessage('transfer_amount_ph')}/>
+                        placeholder={this.formatMessage('transfer_amount_ph')}/>:null}
+
                     <div className="text-img-input">
                         <div className="text-box clear-leftpadding">
                             <div className="label"><span>{this.formatMessage('transfer_memo')}</span></div>
@@ -357,9 +417,10 @@ class Transfer extends BaseComponent {
                             </div>
                         </div>
                     </div>
+                    
                     <AmountSelector
                         refCallback={this.setNestedRef.bind(this)}
-                        label={this.formatMessage('transfer_chargefee')} disabled={true}
+                        label={'基础手续费'} disabled={true}
                         amount={fee}
                         onChange={this.onFeeChanged.bind(this)}
                         asset={fee_asset_types.length && feeAsset ? feeAsset.get("id") : ( fee_asset_types.length === 1 ? fee_asset_types[0] : fee_asset_id ? fee_asset_id : fee_asset_types[0])}

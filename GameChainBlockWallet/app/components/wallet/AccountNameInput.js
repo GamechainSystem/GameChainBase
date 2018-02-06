@@ -107,13 +107,13 @@ class AccountNameInput extends BaseComponent {
             ChainValidation.is_account_name_error(value);
 
         this.state.warning = null;
-        if (this.props.cheapNameOnly) {
-            if (!this.state.error && !ChainValidation.is_cheap_name(value))
-                this.state.error = this.formatMessage("wallet_createErrMsg");
-        } else {
-            if (!this.state.error && !ChainValidation.is_cheap_name(value))
-                this.state.warning = this.formatMessage("wallet_createErrMsg2");
-        }
+        // if (this.props.cheapNameOnly) {
+        //     if (!this.state.error && !ChainValidation.is_cheap_name(value))
+        //         this.state.error = this.formatMessage("wallet_createErrMsg");
+        // } else {
+        //     if (!this.state.error && !ChainValidation.is_cheap_name(value))
+        //         this.state.warning = this.formatMessage("wallet_createErrMsg2");
+        // }
         this.setState({value: value, warning: this.state.warning, error: this.state.error});
         //if (this.props.onChange) this.props.onChange({value: value, valid: !this.getError(), errMsg: this.state.error});
         if (this.props.accountShouldExist || this.props.accountShouldNotExist) AccountActions.accountSearch(value);

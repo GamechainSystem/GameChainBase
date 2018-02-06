@@ -31,22 +31,22 @@ import Backup from  "./components/wallet/Backup";
 import ChangePassword from  "./components/wallet/ChangePassword";
 import ImportBackup from  "./components/wallet/ImportBackup";
 import UnlockWallet from "./components/wallet/UnlockWallet";
-import TransactionContainer from "./components/transaction/TransactionContainer";
-import Buy from "./components/transaction/Buy";
-import Sell from "./components/transaction/Sell";
-import Orders from "./components/transaction/Orders";
-import History from "./components/transaction/History";
+// import TransactionContainer from "./components/transaction/TransactionContainer";
+// import Buy from "./components/transaction/Buy";
+// import Sell from "./components/transaction/Sell";
+// import Orders from "./components/transaction/Orders";
+// import History from "./components/transaction/History";
 import LastOperationContainer from "./components/LastOperation";
-import Scan from "./components/scanit/Scan";
+// import Scan from "./components/scanit/Scan";
 import TransferContainer from "./components/wallet/Transfer";
 import BalanceWrapper from "./components/dashboard/Balance";
-import MarketListContainer from "./components/transaction/MarketList";
+// import MarketListContainer from "./components/transaction/MarketList";
 
 import LookKey from "./components/dashboard/LookKey";
 
 
 
-let btsgoHistory = __HASHHISTORY__ ? hashHistory : browserHistory;
+let gcsHistory = __HASHHISTORY__ ? hashHistory : browserHistory;
 ChainStore.setDispatchFrequency(20);
 
 let connect = true;
@@ -56,15 +56,17 @@ let willTransitionTo = (nextState, replaceState, callback) => {
     if (nextState.location.pathname === "/init-error") {
         return callback();
     }
-    console.debug('Apis.instance');
+    
+    // console.debug('Apis.instance');
     Apis.instance(connectionString, !!connect).init_promise.then(() => {
+
         var db;
         try {
             db = iDB.init_instance(window.openDatabase ? (shimIndexedDB || indexedDB) : indexedDB).init_promise;
         } catch (err) {
             console.log("db init error:", err);
         }
-        //console.debug(db);
+        // console.debug(db);
         return Promise.all([db]).then(() => {
             console.log("db init done");
             return Promise.all([
@@ -98,7 +100,7 @@ let willTransitionTo = (nextState, replaceState, callback) => {
 
 let routes = (
     <Route path='/' component={RootIntl} onEnter={willTransitionTo}>
-        <IndexRoute component={Dashboard}/>
+        <IndexRoute component={LastOperationContainer}/>
         <Route path="create-account" component={CreeateAccount}/>
         <Route path="init-error" component={Settings}>
             <IndexRoute component={GlobalSettingContainer}/>
@@ -115,19 +117,19 @@ let routes = (
         <Route path="look-key" component={LookKey}/>
 
         <Route path="unlock" component={UnlockWallet}/>
-        <Route path="transaction/:marketID" component={TransactionContainer}>
+        {/* <Route path="transaction/:marketID" component={TransactionContainer}>
             <IndexRoute component={Buy}/>
             <Route path="/transaction/:marketID/buy" component={Buy}/>
             <Route path="/transaction/:marketID/sell" component={Sell}/>
             <Route path="/transaction/:marketID/orders" component={Orders}/>
             <Route path="/transaction/:marketID/history" component={History}/>
-        </Route>
+        </Route> */}
         <Route path="last-operate" component={LastOperationContainer}/>
-        <Route path="scan" component={Scan}/>
+        {/* <Route path="scan" component={Scan}/> */}
         <Route path="transfer" component={TransferContainer}/>
         <Route path="balance/:account" component={BalanceWrapper}/>
-        <Route path="markets" components={MarketListContainer}/>
+        {/* <Route path="markets" components={MarketListContainer}/> */}
     </Route>
 );
 
-render(<Router history={btsgoHistory} routes={routes}/>, document.getElementById('content'));
+render(<Router history={gcsHistory} routes={routes}/>, document.getElementById('content'));

@@ -3,6 +3,8 @@
  */
 import React from "react";
 import BaseComponent from "./BaseComponent";
+import AccountName from "./Utility/AccountName";
+
 import {ChainTypes as grapheneChainTypes} from "bitsharesjs";
 import AltContainer from "alt-container";
 import {RecentTransactions} from "./dashboard/Operation";
@@ -16,11 +18,16 @@ import AccountStore from "../stores/AccountStore";
 
 const {operations} = grapheneChainTypes;
 
+import { Modal, Button } from 'antd';
+
+
 class LastOperation extends BaseComponent {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true
+            loading: true,
+            currentBlockInfo:null,
+            visible:false
         };
     }
     getHistory(accountsList, filterOp, customFilter) {
@@ -57,17 +64,35 @@ class LastOperation extends BaseComponent {
     }
 
     
-    componentDidMount() {        
+    componentDidMount() {    
+        AccountStore.listen(this.onCurrentBlockInfoChange.bind(this)); 
         AccountActions.setGlobalLoading.defer(false); 
     }
-    
+    componentWillUnmount() {
+        AccountStore.unlisten(this.onCurrentBlockInfoChange);
+    }
+    onCurrentBlockInfoChange(){
+        this.setState({
+            currentBlockInfo:AccountStore.getState().currentBlockInfo,
+            visible:!!AccountStore.getState().currentBlockInfo
+        });
+    }
+    handleOk = (e) => {
+        this.setState({
+          visible: false,
+        });
+    }
     render() {
         let {linkedAccounts} = this.props;
+        let {currentBlockInfo}=this.state;
+        if(currentBlockInfo){
+            currentBlockInfo.time=currentBlockInfo.timestamp.replace("T"," ");
+            currentBlockInfo.time=new Date(new Date(currentBlockInfo.time).getTime()+8*60*60*1000).format("yyyy年MM月dd日 HH:mm:ss");
+        }
         let accountCount = linkedAccounts.size;
-
         return (
-            <div className="content vertical-flex vertical-box clear-toppadding">
-                 <ul className="breadcrumb" style={{width:"96%",marginBottom:"0"}}>
+            <div className="content vertical-flex vertical-box">
+                 <ul className="breadcrumb" style={{marginBottom:"0"}}>
                     <li>
                         <a >账户</a> 
                     </li>
@@ -76,21 +101,50 @@ class LastOperation extends BaseComponent {
                     </li>
                 </ul>
                 <div className="last-operation vertical-flex vertical-box">
-                    <div className="last-operation-header">
-                        <span>{this.formatMessage("lastOperation_operation")}</span>
-                        <span>{this.formatMessage("lastOperation_info")}</span>
-                        <span >手续费</span>
-                        <span >时间</span>
+                    <div className="last-operation-header-c">
+                        <div className="last-operation-header" >
+                            <span>{this.formatMessage("lastOperation_operation")}</span>
+                            <span>{this.formatMessage("lastOperation_info")}</span>
+                            <span >手续费</span>
+                            <span >时间</span>
+                            <span >区块信息</span>
+                        </div>
                     </div>
-                    <div className="separate2"></div>
+                    {/* <div className="separate2"></div> */}
                     {accountCount ? <RecentTransactions
                         accountsList={linkedAccounts}
-                        limit={10}
+                        limit={9}
                     /> :
                         <div className="last-operation-body vertical-flex scroll">
                         </div>
                     }
                 </div>
+
+                {currentBlockInfo?<Modal
+                    title={'区块#'+currentBlockInfo.id}
+                    visible={this.state.visible}
+                    footer={[
+                        <Button key="submit" type="primary"  onClick={this.handleOk}>
+                           确定
+                        </Button>,
+                      ]}
+                    >
+                    <ul>
+                        <li>
+                            <span>日期</span>：
+                            <span>{currentBlockInfo.time}</span>
+                        </li>
+                        <li>
+                            <span>见证人</span>：
+                            <AccountName account={currentBlockInfo.witness} /> 
+                        </li>
+                        <li>
+                            <span>上一个区块</span>：
+                            {currentBlockInfo.previous}
+                        </li>
+                        <li><span>交易数量</span>：{currentBlockInfo.transactions.length}</li>
+                   </ul>
+                </Modal>:null}     
             </div>
         );
     }

@@ -3,7 +3,7 @@ import idb_helper from "./idb-helper"
 import iDBRoot from "./idb-root"
 
 const DB_VERSION = 2 // Initial value was 1
-const DB_PREFIX = "btsgo_v2"
+const DB_PREFIX = "gcs_v2"
 const WALLET_BACKUP_STORES = [
     "wallet", "private_keys", "linked_accounts"
 ]
@@ -42,7 +42,7 @@ var openDatabase = function(database_name = this.getDatabaseName()) {
 
         var openRequest = iDB.impl.open(database_name, DB_VERSION);
         openRequest.onupgradeneeded = function (e) {
-             console.log('... openRequest.onupgradeneeded ' + database_name)
+            //  console.log('... openRequest.onupgradeneeded ' + database_name)
             // Don't resolve here, indexedDb will call onsuccess or onerror next
             upgrade(e.target.result, e.oldVersion)
         };

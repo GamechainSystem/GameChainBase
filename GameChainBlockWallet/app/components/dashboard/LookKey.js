@@ -163,63 +163,8 @@ class Balance extends BaseComponent {
                 noPrefix
             /> : null;
         return (
-            <div className="content vertical-flex vertical-box clear-toppadding content_balance">
-                {/* <table className="table">
-                    <caption>余额</caption>
-                    <thead>
-                        <tr>
-                            <th>资产</th>
-                            <th>换算值</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                         <tr>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table> */}
-
+            <div className="content vertical-flex vertical-box content_balance"> 
                 <KeysView account={account}/>
-
-                {/* {
-                    totalBalanceList.size>0?(
-                        <div className="balance vertical-flex vertical-box">
-                        <div className="balance-account">
-                            <label>{this.formatMessage('account_name')}：</label>
-                            <KeysView account={account}/>
-                        </div>
-                        <div className="separate2"></div>
-                        <div className="balance-header">
-                            <span>{this.formatMessage("balance_assets")}</span>
-                            <span>{this.formatMessage("balance_conversion")}</span>
-                        </div>
-                        <div className="separate2"></div>
-                        <div className="balance-body vertical-flex scroll">
-                            {includedBalances}
-                            {hiddenBalances}
-                            {totalBalanceList.size > 0 ?
-                                <div className="balance-row">
-                                    <span>{this.formatMessage('account_totalBalance')}：</span>
-                                    {totalBalance}
-                                </div>
-                                : null}
-                        </div>
-                    </div>
-                    ):(<Alert
-                    message={<div className="noData"><Icon  type="frown-o"  />没有相关资产数据</div>}
-                    description=""
-                    type="info"
-                    /> ) 
-                } */}
             </div>
         );
     }

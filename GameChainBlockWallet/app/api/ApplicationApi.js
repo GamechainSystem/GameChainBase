@@ -74,12 +74,14 @@ class ApplicationApi {
         encrypt_memo = true,
         optional_nonce = null,
         propose_account = null,
-        fee_asset_id = "1.3.0"
+        fee_asset_id = "1.3.0",
+        isOnlyGetFee=false
     }) {
         let memo_sender = propose_account || from_account;
 
-        let unlock_promise = WalletUnlockActions.unlock();
 
+        let unlock_promise = isOnlyGetFee?true:WalletUnlockActions.unlock();
+      
         return Promise.all([
             FetchChain("getAccount", from_account),
             FetchChain("getAccount", to_account),
@@ -163,6 +165,8 @@ class ApplicationApi {
                 memo: memo_object
             });
 
+        
+             
             if( propose_account ) {
                 tr.add_type_operation("proposal_create", {
                     proposed_ops: [{ op: transfer_op }],
@@ -172,10 +176,12 @@ class ApplicationApi {
                 tr.add_operation( transfer_op )
             }
 
+   
             return WalletDb.process_transaction(
                 tr,
                 null, //signer_private_keys,
-                broadcast
+                broadcast,
+                isOnlyGetFee
             )
         })
     }

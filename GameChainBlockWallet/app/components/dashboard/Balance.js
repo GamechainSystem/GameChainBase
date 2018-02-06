@@ -163,7 +163,7 @@ class Balance extends BaseComponent {
                 noPrefix
             /> : null;
         return (
-            <div className="content vertical-flex vertical-box clear-toppadding content_balance">
+            <div className="content vertical-flex vertical-box content_balance">
                 <ul className="breadcrumb" style={{marginBottom:"0"}}>
                     <li>
                         <a >账户</a> 

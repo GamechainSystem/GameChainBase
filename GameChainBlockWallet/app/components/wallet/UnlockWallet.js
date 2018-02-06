@@ -85,25 +85,24 @@ class UnlockWallet extends BaseComponent {
             <div className="popup-window UnlockWallet">
                 <Modal visible={this.state.visible} onClose={this.hide.bind(this)} height={3.2}>
                     <div className="title">{this.formatMessage('transaction_confirm_unlock')}</div>
-                    <div className="message-box"></div>
+                    {/* <div className="message-box"></div> */}
                     <div className="body">
-                        {/* <div className="input-row">
-                            <input ref="password_input" className="input" type="password"
-                                   placeholder={this.formatMessage('wallet_password_ph')}/>
-                        </div> */}
-                        <div className="input-group">
-                            <span className="input-group-addon" id="basic-addon1">
-                                <i className="glyphicon glyphicon-lock"></i>
-                            </span>
-                            <input ref="password_input" type="password" className="form-control" placeholder={this.formatMessage('wallet_password_ph')}aria-describedby="basic-addon1" />
+                        <div >
+                            <div className="message-box error_msg">
+                                {this.state.password_error}
+                            </div>
+                            <div className="input-group">
+                                <span className="input-group-addon" id="basic-addon1">
+                                    <i className="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input ref="password_input" type="password" className="form-control" placeholder={this.formatMessage('wallet_password_ph')}aria-describedby="basic-addon1" />
+                                <button onClick={this.onPasswordEnter} className="uk-button uk-button-primary">{this.formatMessage('btn_ok')}</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="message-box error_msg">
-                        {this.state.password_error}
-                    </div>
-                    <div className="buttons">
+                    {/* <div className="buttons">
                         <button onClick={this.onPasswordEnter} className="uk-button uk-button-primary uk-button-large">{this.formatMessage('btn_ok')}</button>
-                    </div>
+                    </div> */}
                 </Modal>
             </div>
         );

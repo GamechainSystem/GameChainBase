@@ -1,6 +1,7 @@
 //定义主色调
 $blueColor: #42609E !default;
 $orangeRedColor: #ff8c00 !default;
+$orangeColor: #e2c321 !default;
 $greenColor: #1e87f0 !default;
 $whiteColor: #ffffff !default;
 $blackColor: #666666 !default;
@@ -11,6 +12,17 @@ $whiteTColor:rgba(255, 255, 255, 0.6);
 
 $grayColor: #cccccc !default;
 $bgGrayColor: #dddddd !default;
+
+$color-text-dark: rgba(255, 255, 255, 0.3);
+$color-text-light : rgba(255, 255, 255, 0.5);
+$color-text-ll : rgba(255, 255, 255, 0.8);
+$white-60:rgba(255,255,255,0.6);
+
+
+$black-80:rgba(0,0,0,0.8);
+$black-60:rgba(0,0,0,0.6);
+$black-50:rgba(0,0,0,0.5);
+$black-30:rgba(0,0,0,0.3);
 
 //定义字体大小
 $icoFontSize: .4rem;
@@ -26,3 +38,5 @@ $smallFontSize: .18rem;
 }
 
 $basefamily: \5FAE\8F6F\96C5\9ED1;
+
+

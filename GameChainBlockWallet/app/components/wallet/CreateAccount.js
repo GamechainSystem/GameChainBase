@@ -68,8 +68,6 @@ class CreeateAccount extends BaseComponent {
         let firstAccount = AccountStore.getMyAccounts().length === 0;
         let valid = this.state.validAccountName;
         if (!WalletDb.getWallet()) {
-            console.log('this.state.validAccountName');
-            console.log(this.state.validPassword);
             valid = valid && this.state.validPassword;
          
         }
@@ -88,9 +86,10 @@ class CreeateAccount extends BaseComponent {
               
         if (e.errMsg) {
             // console.log(e.errMsg=="Account name should be longer");
-            // if(e.errMsg.indexOf('be longer')>=0){
-            //     e.errMsg="账户长度太短";
-            // }
+            if(e.errMsg.indexOf('be longer')>=0){
+                e.errMsg="账户名长度不够";
+            }
+
             state.error_message= e.errMsg;
             //this.setState({error_message: e.errMsg});
             // return;
@@ -101,7 +100,7 @@ class CreeateAccount extends BaseComponent {
         if (e.valid !== undefined) state.validAccountName = e.valid;
         if (e.value !== undefined) state.accountName = e.value;
                 
-        state.disabledPwd=!WalletDb.getWallet()&&!ChainValidation.is_cheap_name(state.accountName);
+        state.disabledPwd=!WalletDb.getWallet();//&&!ChainValidation.is_cheap_name(state.accountName)
         state.disabledPwd=this.isAccountExist(state.accountName);
          
         this.setState(state);
@@ -204,8 +203,8 @@ class CreeateAccount extends BaseComponent {
     onSubmit(e) {
         e.preventDefault();
         let account_name = this.refs.accountName.refs.nameInput.getValue();
-        if(!account_name){
-            this.setState({error_message: "账户不能为空"}); 
+        if(!account_name||account_name.length<3){
+            this.setState({error_message: "请输入正确的账户名"}); 
             return;      
         }
 
@@ -214,9 +213,9 @@ class CreeateAccount extends BaseComponent {
             return;   
         }
 
-        if(!WalletDb.getWallet()&&!ChainValidation.is_cheap_name(account_name)){
-            return;
-        }
+        // if(!WalletDb.getWallet()&&!ChainValidation.is_cheap_name(account_name)){
+        //     return;
+        // }
 
         if(this.refs.password){
             if(!this.refs.password.value()){
@@ -227,15 +226,19 @@ class CreeateAccount extends BaseComponent {
                 this.setState({error_message: "请输入确认密码"}); 
                 return;    
             }
+
+            if(this.refs.password.value()!=this.refs.password.confirm_password_value()){
+                this.setState({error_message: "两次输入密码不相同"}); 
+                return;    
+            }
         }    
         
-        // console.info('this.isValid()this.isValid()')
-        // console.info(!this.isValid());
+
+
         if (!this.isValid()) return;
         this.setState({loading: true});      
         let reg_account_name = this.state.registrar_account;
-        console.info('WalletDb.getWallet()')
-        console.info(WalletDb.getWallet());
+
         if (WalletDb.getWallet()) {
             ChainStore.getAccount(reg_account_name);
             TransactionConfirmActions.proposeFeePayingAccount(reg_account_name);
@@ -284,7 +287,7 @@ class CreeateAccount extends BaseComponent {
         return (
             <div className="content regPanel_c">
                <div className="regPanel">
-                  <h4>创建您的{hasWallet?"子":""}账户</h4>
+                  <h4>创建您的{hasWallet?"":""}账户</h4>
                   <form>
                     <AccountNameInput
                         ref="accountName"
@@ -320,9 +323,7 @@ class CreeateAccount extends BaseComponent {
                        }
                     </div>
                     <a onClick={this.goImportBackup.bind(this)}>从备份恢复钱包</a>
-                    <div>
-                      <a onClick={this.goImportKey.bind(this)}>从钱包密钥恢复钱包</a>
-                    </div>
+                    <a onClick={this.goImportKey.bind(this)}>从钱包密钥恢复钱包</a>
                         {/* <button type="button"  onClick={this.onSubmit.bind(this)} 
                          className="btn btn-warning">{this.formatMessage('btn_ok')}</button> */}
     

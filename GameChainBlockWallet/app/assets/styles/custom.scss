@@ -1,4 +1,4 @@
-input,select{ outline: none; border:0; }
+input,select,button{ outline: none; border:0; }
 .breadcrumb{
     // width: 96%;
     margin: 0 auto 0.2rem;
@@ -53,7 +53,7 @@ input,select{ outline: none; border:0; }
                         color:#999;
                         margin-right: 0.1rem;
                         &::after{
-                            content:":" 
+                            content:"：" 
                         }
                     }
                 }
@@ -61,7 +61,7 @@ input,select{ outline: none; border:0; }
                     background-color: #fff;
                 }
                 .body_title{
-                    padding: 0.1rem 0 0.04rem;
+                    padding: 0.16rem 0 0.04rem;
                     margin-bottom: 0.1rem;
                     border-bottom: 1px dotted #1e87f0;
                 }
@@ -69,16 +69,9 @@ input,select{ outline: none; border:0; }
         }
     }
 }
-.modal-dialog{
-    >.i_close{
-       font-size: 0.28rem;
-    }
-}
+
 .UnlockWallet{
     .modal-dialog{
-        // >.i_close{
-        //    font-size: 0.28rem;
-        // }
         .body{
             .input-group{
                 // .label{color:#999;}
@@ -132,18 +125,20 @@ html{
                 //   height: 57px;
                   flex: 1;
                   .navbar-brand{
-                      padding: 0;
+                      padding: 0;                  
                       width:100px;
                       height: 36px;
+                      line-height: 36px;
+                      color:#1e87f0;
                       margin-left: 0.2rem;
                       background-image: url("../imgs/logo.png");
                       background-size: cover;
                       background-position: center center;
                       background-repeat: no-repeat;
                   }
-                  .navbar-brand:hover{
-                    background-image: url("../imgs/logo_hover.png");                    
-                  }
+                //   .navbar-brand:hover{
+                //     background-image: url("../imgs/logo_hover.png");                    
+                //   }
               }
              .navbar-right{
                  margin: 0;
@@ -250,9 +245,12 @@ html{
                     }
        
                     >.last-operation{
-                       padding:0 0.2rem;
-                       font-size: 0.14rem;    
+                        padding:0 0.2rem;
+                        font-size: 0.14rem;    
                         font-weight: normal;
+                        .green-btn{
+                            height: 0.34rem;
+                        }
                        .last-operation-header{
                            // font-size: 0.18rem;
                            height: 0.4rem;
@@ -261,11 +259,15 @@ html{
 
                            span:nth-child(3){
                               width: 1.2rem;
-                              text-align: center; 
+                              text-align: left; 
                            }
                            span:nth-child(4){
-                                width: 1.2rem;
-                                text-align: center;
+                                width: 1rem;
+                                text-align: left;
+                           }
+                           span:nth-child(5){
+                            width: 0.6rem;
+                             text-align: left;
                            }
                        }
                        .last-operation-body{
@@ -273,7 +275,12 @@ html{
                            .last-operation-row{
                                 font-size: 0.14rem;
                                 padding: 0.16rem 0.2rem;
-                                >span{color:#1e87f0; width: 0.6rem;}
+                                >span{
+                                      color:#1e87f0;
+                                      min-width: 80px;
+                                      display:inline-block;
+                                      margin-right: 0;
+                                     }
                                 >div{
                                     text-align: left;
                                     color:#000;
@@ -282,9 +289,18 @@ html{
                                 }
                                 >p{
                                     .time{
-                                        width:1.2rem;
+                                        width:1rem;
                                         display: inline-block;
-                                        text-align: center;
+                                        text-align: left;
+                                    }
+                                }
+
+                                .memo{
+                                    display: block;
+                                    >span{
+                                        max-width: 600px;
+                                        display: inline-block;
+                                        word-wrap: break-word;
                                     }
                                 }
                             }
@@ -295,7 +311,6 @@ html{
                     // margin-top: 0.6rem;
                     // border:1px solid #efefef;
                     // padding-top: 0.36rem;
-                    width: 96%;
                     height: auto;
                     .div_main_body{
                         max-width: 6.6rem;  
@@ -303,12 +318,9 @@ html{
                         
                         >.operate{
                             height: auto;
-                            margin-top: 0.1rem;
                             text-align: center;
                         }
                         .text-img-input{
-                            margin-bottom: 0.2rem;
-                            font-size: 0.18rem;
                             .icon{
                                 margin: 0;
                                 padding: 0;
@@ -336,8 +348,10 @@ html{
                                     border-bottom: 1px solid #c2defb;
                                     height: 0.38rem;
                                     font-size: 0.14rem;
+                                    
                                     .error{
                                         color:red;
+                                        // width: 86px;
                                         span{
                                             margin-bottom: 0.03rem;
                                         }
@@ -423,21 +437,19 @@ html{
                     margin-bottom: 0.1rem;
                 }
             }
-            >.setting_home{
+            .setting_home{
                 margin: auto;
                 width: 96%;
                 max-width: 5rem;
                 .ant-btn{
                     width: 100%;
                     font-size: 0.16rem;
-                    margin-bottom: 0.16rem;
-                }
-                >.div_label{
-                    // margin-bottom: 0.06rem;
+                    margin-top: 0.16rem;
+                    border-radius:0;
                 }
                 .div-select-input{
                     display: flex;
-                    margin-bottom: 0.2rem;
+                    margin-bottom: 0.1rem;
                     margin-top: 0.04rem;
                     .ant-input-number{
                         flex: 1;
@@ -449,7 +461,9 @@ html{
                     height: auto; 
                     line-height: 1;
                     font-weight: normal;    
-                    padding: 0;                
+                    padding: 0; 
+                    border-radius:0;
+               
                     label{
                         font-weight: normal;
                     }
@@ -474,11 +488,7 @@ html{
                                     cursor: pointer;
                                     padding: 0.1rem 0.06rem;
                                 }
-                            //   .span_walletName{
-                            //       padding: 0.1rem 0
-                            //   }
                             }
-                            // li:last-child{ margin-bottom: 0.1rem;}
                         }
                         >div{
                             input{
@@ -499,8 +509,8 @@ html{
                     padding: 0.07rem 0.1rem;
                     background: #fff;
                     margin-bottom: 0.1rem;
-                    &:nth-child(1){
-                        margin-bottom: 0.2rem; 
+                    &:nth-child(2){
+                        margin-top: 0.2rem; 
                     }
                 }
             }

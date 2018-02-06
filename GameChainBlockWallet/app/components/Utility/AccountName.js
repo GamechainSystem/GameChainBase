@@ -8,7 +8,7 @@ import ChainTypes from "../Utility/ChainTypes";
 
 class AccountName extends BaseComponent {
     static propTypes = {
-        account: ChainTypes.ChainObject.isRequired
+         account: ChainTypes.ChainObject.isRequired
     };
 
     constructor(props) {
@@ -24,6 +24,7 @@ class AccountName extends BaseComponent {
     }
 
     render() {
+        console.info('this.props.account',this.props.account.toJS());
         let account_name = this.props.account.get("name");
         if (!account_name) {
             return <span>{this.props.account.get("id")}</span>;

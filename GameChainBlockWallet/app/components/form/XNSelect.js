@@ -59,7 +59,8 @@ class XNSelect extends BaseComponent {
         e.nativeEvent.stopImmediatePropagation();
         let oldVal = this.state.value;
         this.setState({value: d.text});
-        if (this.props.onChange !== null && oldVal !== d.value) {
+        // console.info('oldVal !== d.value',oldVal,d.value);
+        if (this.props.onChange !== null && oldVal !== d.text) {
             this.props.onChange(d);
         }
     }

@@ -151,7 +151,7 @@ class Backup extends BaseComponent {
 
         return (
             <div className="content content_Backup">
-                 <ul className="breadcrumb" style={{marginBottom:"0"}}>
+                <ul className="breadcrumb" style={{marginBottom:"0"}}>
                     <li>
                         <a >钱包管理</a> 
                     </li>
@@ -169,7 +169,7 @@ class Backup extends BaseComponent {
                     {/* <button type="button" className="btn btn-success" onClick={this.onBackupClick.bind(this)}> {btnValue}</button> */}
                     <button onClick={this.onBackupClick.bind(this)} className="uk-button uk-button-primary uk-button-large">{btnValue}</button>
 
-                    {btnValue=='下载'?<button onClick={this.onOkClick.bind(this)} className="uk-button uk-button-default uk-button-large btn_sure">确认</button>:null}
+                    {btnValue=='下载'?<button onClick={this.onOkClick.bind(this)} className="uk-button uk-button-primary uk-button-large btn_sure">确认</button>:null}
                         {/* <input className="green-btn" type="button"
                             value={btnValue}
                             onClick={this.onBackupClick.bind(this)}/> */}

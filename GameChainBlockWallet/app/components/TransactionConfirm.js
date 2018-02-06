@@ -72,7 +72,7 @@ class TransactionConfirm extends BaseComponent {
         let title = null;
         let button = (
             <div className="buttons">
-                <input type="button" className="green-btn" value={this.formatMessage('btn_ok')}
+                <input type="button" className="uk-button uk-button-primary" value={this.formatMessage('btn_ok')}
                        onClick={this.onCloseClick.bind(this)}/>
             </div>
         );
@@ -81,9 +81,9 @@ class TransactionConfirm extends BaseComponent {
                 title = (
                     <div className="title">
                         {this.formatMessage('transaction_broadcast_fail')}<br/>
-                        <span className="smallFontSize">{this.props.error}</span>
+                        {/* <span className="smallFontSize">{this.props.error}</span> */}
                     </div>
-                );//transaction_broadcast_fail transaction_confirm
+                );
             } else {
                 title = (
                     <div className="title">
@@ -122,7 +122,7 @@ class TransactionConfirm extends BaseComponent {
         }
         return (
             // , margin: '10px auto 10px auto'
-            <div className="popup-window">
+            <div className="popup-window TransactionConfirm">
                 <Modal visible={this.state.visible} showCloseButton={!broadcasting}
                        customStyles={{height: 'auto'}}
                        onClose={this.onCloseClick.bind(this)}>

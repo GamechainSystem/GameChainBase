@@ -15,6 +15,8 @@ import WalletActions from "../../actions/WalletActions";
 import ConfirmActions from "../../actions/layout/ConfirmActions";
 import WalletUnlockActions from "../../actions/WalletUnlockActions";
 
+import {update_ls_sha1s} from '../../common';
+
 class WalletManage extends BaseComponent {
     static getPropsFromStores() {
         return WalletManagerStore.getState();
@@ -63,12 +65,15 @@ class WalletManage extends BaseComponent {
         let names = this.props.wallet_names;
         let size = names.size;
         let current_wallet = this.props.current_wallet;
-        console.info(current_wallet);
+
         let title = this.formatMessage('message_title');
         let msg = this.formatMessage('wallet_confirmDelete');
         WalletUnlockActions.unlock().then(() => {
             ConfirmActions.show(title, msg, () => {
                 WalletManagerStore.onDeleteWallet(item.value);
+
+                update_ls_sha1s(item.value);
+    
                 if (current_wallet === item.value) {
                     if (size > 1) {
                         let wn = null;
