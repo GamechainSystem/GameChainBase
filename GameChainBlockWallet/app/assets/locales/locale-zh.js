@@ -241,7 +241,7 @@ export const zh_CN = {
     account_totalBalance: "总额",
     account_more: "查看更多",
     account_not_yours: "不是你的账户",
-    account_keysview: "密钥查看",
+    account_keysview: "私钥查看",
     account_owner_key:"账户",
     account_active_key:"活跃",
     account_memo_key:"备注",

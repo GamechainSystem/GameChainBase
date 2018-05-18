@@ -162,7 +162,7 @@ html{
 
                         .icon{
                             display: flex;
-                            margin-right: 0.05rem;
+                            margin-right: 8px;
                             position: relative;
                             top:0.02rem;    
                             .img{
@@ -244,7 +244,7 @@ html{
                         background-color: #dedede;
                     }
        
-                    >.last-operation{
+                    .last-operation{
                         padding:0 0.2rem;
                         font-size: 0.14rem;    
                         font-weight: normal;
@@ -369,7 +369,7 @@ html{
                     .regPanel{
                         margin:auto;
                         width: 96%;
-                        max-width:5rem;
+                        max-width:5.2rem;
                         font-size: 0.14rem;
                         padding: 0.2rem 0.2rem 0.16rem  0.2rem;
                         border:1px solid #dedede;
@@ -608,51 +608,43 @@ html{
     }
 }
 
-.ul_accounts{
-    li{
-        display: flex;
-        padding: 0.08rem 0.16rem;
-        font-size: 0.14rem;
-        cursor: pointer;
-        .icon{
-            margin-right: 0.1rem;
+ul.Account_Dropdown_Menu{
+    border-radius: 0;
+    >ul{
+        li{
             display: flex;
-            .img{
-               width: 0.26rem !important;   
-               height: 0.26rem !important;     
+            padding: 0.08rem 0.16rem;
+            font-size: 0.15rem;
+            align-items: center;
+            cursor: pointer;
+            .icon{
+                margin-right: 0.1rem;
+                display: flex;
+                .img{
+                   width: 0.26rem !important;   
+                   height: 0.26rem !important;     
+                }
+                i{
+                    font-size: 0.2rem;
+                }
             }
+    
+            &:hover{
+                background: #dedede;
+            }
+        } 
+        .current-account{
+            color:#a0d3e8;
+            background: #dedede;
         }
-
-        &:hover{
-            //  background: #676464;
-             background: #dedede;
-             
-        }
-    } 
-    .current-account{
-        color:#a0d3e8;
     }
 }
+
 
 .ant-popover-content{
     .ant-popover-inner{
-        //  background: #585555;  
-         .ant-popover-title{
-            //  color:rgba(255,255,255,0.6);
-            //  border-bottom: 1px solid rgba(255,255,255,0.2);
-         }
         .ant-popover-inner-content{
-            // color:#fff;
             padding: 0;
         }      
     }
-}
-body .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow, .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow, .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow{
-    // border-bottom-color: #585555;    
-    
-}
-
-body .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow:after, .ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow:after,body .ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow:after{
-    // border-bottom-color: #585555;    
-    
 }

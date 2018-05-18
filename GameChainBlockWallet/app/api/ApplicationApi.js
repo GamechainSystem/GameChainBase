@@ -1,6 +1,7 @@
 import WalletUnlockActions from "../actions/WalletUnlockActions"
 import WalletDb from "../stores/WalletDb"
 import {Aes, ChainValidation, key, TransactionBuilder, TransactionHelper, FetchChain} from "bitsharesjs";
+import accountUtils from "../../common/account_utils";
 
 class ApplicationApi {
 
@@ -75,12 +76,11 @@ class ApplicationApi {
         optional_nonce = null,
         propose_account = null,
         fee_asset_id = "1.3.0",
-        isOnlyGetFee=false
+        otherOpt=null
     }) {
         let memo_sender = propose_account || from_account;
 
-
-        let unlock_promise = isOnlyGetFee?true:WalletUnlockActions.unlock();
+        let unlock_promise = WalletUnlockActions.unlock();
       
         return Promise.all([
             FetchChain("getAccount", from_account),
@@ -101,7 +101,6 @@ class ApplicationApi {
             if( memo && encrypt_memo  ) {
 
                 memo_from_public = chain_memo_sender.getIn(["options","memo_key"]);
-
                 // The 1s are base58 for all zeros (null)
                 if( /111111111111111111111/.test(memo_from_public)) {
                     memo_from_public = null;
@@ -129,7 +128,7 @@ class ApplicationApi {
                 let nonce = optional_nonce == null ?
                             TransactionHelper.unique_nonce_uint64() :
                             optional_nonce
-
+            
                 memo_object = {
                     from: memo_from_public,
                     to: memo_to_public,
@@ -165,7 +164,7 @@ class ApplicationApi {
                 memo: memo_object
             });
 
-        
+            //console.info.info.info('transfer_op',transfer_op);
              
             if( propose_account ) {
                 tr.add_type_operation("proposal_create", {
@@ -176,12 +175,23 @@ class ApplicationApi {
                 tr.add_operation( transfer_op )
             }
 
-   
+            /*******************************/
+       
+       
+            /******************************/
+
+
+            if(otherOpt){
+               let updateAccountObject=this.getUpdateAccountObject(otherOpt.account,otherOpt.goods)
+                
+               tr.add_type_operation("account_update",updateAccountObject);
+            }
+
             return WalletDb.process_transaction(
                 tr,
                 null, //signer_private_keys,
                 broadcast,
-                isOnlyGetFee
+                otherOpt
             )
         })
     }
@@ -268,6 +278,63 @@ class ApplicationApi {
 
             return WalletDb.process_transaction(tr, null, true)
         })
+    }
+
+    // updateAccount(updateObject) {
+    //     let tr = new TransactionBuilder();
+    //     tr.add_type_operation("account_update", updateObject);
+    //     return WalletDb.process_transaction(tr, null, true);
+    // }
+    
+    getUpdateAccountObject(account,goods){
+        //console.info.info.info('account',account);
+
+        let updated_account =account;
+        let updateObject = {account: updated_account.id};
+        let new_options =updated_account.options;
+        new_options.memo_key=updated_account.options.memo_key
+
+        let gcs={
+            goods:{}
+        }
+        var el_str="";
+        if(new_options.extensions.length){
+            el_str=new_options.extensions[0];
+            //console.info.info.info('el_str',el_str);
+            el_str=el_str.substr(el_str.indexOf("@")+1);
+            //console.info.info.info('el_str',el_str);
+
+            gcs=JSON.parse(el_str);
+            //console.info.info.info('gcs',gcs);
+
+        }
+
+        goods.forEach(item => {
+            gcs.goods[item.id]=item;
+        });
+
+
+        el_str="GCS$plant@"+JSON.stringify(gcs);
+
+        new_options.extensions[0]=el_str;
+
+        // new_options.extensions=[];
+        //new_options.extensions=["dasda"];
+        // let new_proxy_id = "";
+        // new_options.voting_account = new_proxy_id ? new_proxy_id : "1.2.5";
+        // new_options.num_witness = this.state.witnesses.size;
+        // new_options.num_committee = this.state.committee.size;
+
+        updateObject.new_options = new_options;
+
+        // Set fee asset
+        updateObject.fee = {
+            amount: 0,
+            asset_id: accountUtils.getFinalFeeAsset(updated_account.id, "account_update")
+        };
+
+        ////console.info.info.info('updateObject',updateObject);
+        return updateObject;
     }
 }
 

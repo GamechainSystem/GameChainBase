@@ -103,7 +103,7 @@ class WalletActions {
             }).then(r => r.json());
 
             return create_account_promise.then(result => {
-                console.info('create_account_promise',result);
+                //console.info('create_account_promise',result);
                 if (result.error) {
                     throw result.error;
                 }

@@ -6,6 +6,19 @@
 import './assets/loader';
 import './app';
 
+var _configParams={
+    api_node:{
+        url:"ws://47.97.101.131:8095",
+        name:"GCS"
+    },
+    faucet_url:"http://47.97.101.131:3000",
+    chainId:"a458b6e3d040d497e1dd6533c3b7e76553a06aabe7e0ee06a1fdce3f563b421b"                        
+};
+
+var bcl=new BlockChainLib(_configParams);
+
+bcl.init(); 
+
 (function (doc, win) {
     var docEl = doc.documentElement;
     var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';

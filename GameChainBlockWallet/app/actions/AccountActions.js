@@ -48,8 +48,15 @@ class AccountActions {
         return name;
     }
 
-    setCurrentBlockInfo(block) {
-        return block;
+    setQueryAccount(name) {
+        return name;
+    }
+
+    setCurrentBlockInfo(block_num,modal_status) {
+        return {
+            block_num,
+            modal_status
+         };
     }
 
     setGlobalLoading(b) {
@@ -58,14 +65,14 @@ class AccountActions {
     /**
      *  TODO:  This is a function of teh wallet_api and has no business being part of AccountActions
      */
-    transfer(from_account, to_account, amount, asset, memo, propose_account = null, fee_asset_id = "1.3.0",isOnlyGetFee=false) {
+    transfer(from_account, to_account, amount, asset, memo, propose_account = null, fee_asset_id = "1.3.0",otherOpt=null) {
         // Set the fee asset to use
         fee_asset_id = accountUtils.getFinalFeeAsset(propose_account || from_account, "transfer", fee_asset_id);
 
         try {
             return (dispatch) => {
                 return application_api.transfer({
-                    from_account, to_account, amount, asset, memo, propose_account, fee_asset_id,isOnlyGetFee
+                    from_account, to_account, amount, asset, memo, propose_account, fee_asset_id,otherOpt
                 }).then(result => {
                     // console.log( "transfer result: ", result )
                     dispatch(result);

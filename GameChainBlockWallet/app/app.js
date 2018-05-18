@@ -44,7 +44,17 @@ import BalanceWrapper from "./components/dashboard/Balance";
 
 import LookKey from "./components/dashboard/LookKey";
 
+import Account from "./components/Account/AccountPage";
 
+import Shop from "./components/game/shop";
+
+import recommend_games from "./components/game/recommend_games";
+
+import cloudLogin from "./components/wallet/cloudLogin"
+
+import createItems from "./components/game/createItems"
+
+import gatewayRecord from "./components/Account/gatewayRecord"
 
 let gcsHistory = __HASHHISTORY__ ? hashHistory : browserHistory;
 ChainStore.setDispatchFrequency(20);
@@ -100,7 +110,7 @@ let willTransitionTo = (nextState, replaceState, callback) => {
 
 let routes = (
     <Route path='/' component={RootIntl} onEnter={willTransitionTo}>
-        <IndexRoute component={LastOperationContainer}/>
+        <IndexRoute component={Account}/>
         <Route path="create-account" component={CreeateAccount}/>
         <Route path="init-error" component={Settings}>
             <IndexRoute component={GlobalSettingContainer}/>
@@ -128,6 +138,15 @@ let routes = (
         {/* <Route path="scan" component={Scan}/> */}
         <Route path="transfer" component={TransferContainer}/>
         <Route path="balance/:account" component={BalanceWrapper}/>
+        <Route path="account/:account" component={Account}/>
+
+        <Route path="shop" component={Shop}/>
+
+        <Route path="recommend_games" component={recommend_games}/>
+        <Route path="cloudLogin" component={cloudLogin}/>
+        <Route path="create-items" component={createItems}/>
+        <Route path="gateway-record" component={gatewayRecord}/>
+
         {/* <Route path="markets" components={MarketListContainer}/> */}
     </Route>
 );
